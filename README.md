@@ -1,4 +1,4 @@
-# Productivity Skill v2.1 — Intelligent Execution Engine
+# Productivity Skill v2.2 — Intelligent Execution Engine
 
 **[English](./README.md) | [中文](./README_zh.md)**
 
@@ -8,87 +8,102 @@
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![Version](https://img.shields.io/badge/version-2.1-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![Version](https://img.shields.io/badge/version-2.2-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
 > **Not just knowledge — an AI-powered execution system.** Based on Ye Wubin's (叶武滨) patented time management methodology with 150M+ plays on Ximalaya.
 
-This skill transforms your AI assistant into a **proactive productivity executive** that actively manages your tasks, goals, and schedule using the YiXiaoNeng (易效能) system. It assesses your energy, aligns tasks with your goals, and routes them through a dual Calendar/List execution system — all with persistent long-term memory, contextual filtering, and automatic reminders.
+This skill transforms your AI assistant into a **proactive productivity executive** powered by the YiXiaoNeng (易效能) system. It features a universal Inbox for instant capture, the ABC255 classification engine (Do A, Postpone B, Record C), a dual Calendar/List execution system, and persistent long-term memory.
 
-## What's New in v2.1
+## What's New in v2.2
 
-Version 2.1 introduces **contextual list management**, **calendar-first display logic**, and **external system integration**.
-
-| Feature | v2.0 | v2.1 |
+| Feature | v2.1 | v2.2 |
 | :--- | :--- | :--- |
-| **List Organization** | A/B/C/Waiting/Someday sub-lists | **Context-based lists**: @Home, @Office, @Errands, @Calls, @Computer, @AI, @Waiting, Someday |
-| **Task Dates** | No date support in lists | Each task supports **start_date** and **due_date** |
-| **Display Logic** | Simple list display | **Calendar First** → then filtered lists based on energy, context, and time |
-| **External Integration** | Internal memory only | **Auto-sync to Google Calendar** and other external tools when available |
-| **Smart Filtering** | Manual selection | AI filters tasks by **context + energy + time available + due dates** |
+| **ABC Classification** | Energy × Goals matrix | **True ABC255**: A=Planned/Do, B=Urgent/Postpone, C=Captured/Record |
+| **Inbox Sub-Skill** | None | **Universal Inbox**: say "record" anytime to instantly capture any thought |
+| **List Modes** | Context-only | **Two modes**: Simple (A/B/C lists) for beginners, Advanced (Contextual) for power users |
+| **Two-Layer System** | Single classification | **Layer 1**: ABC nature classification. **Layer 2**: Energy/Goals matrix for A-class optimization |
+| **3Q4D Processing** | Not integrated | Inbox items processed with **3 Questions + 4D Actions** during reviews |
 
-## How It Works
-
-The skill follows a strict workflow for every interaction:
+## The Complete System Architecture
 
 ```
-INPUT → ENERGY ASSESSMENT → GOAL ALIGNMENT → PRIORITY CLASSIFICATION → DUAL-TRACK EXECUTION
+                    ┌─────────────┐
+                    │   INBOX     │  ← "Record: buy milk" (instant capture)
+                    │  (C-Class)  │
+                    └──────┬──────┘
+                           │ (processed during Review)
+                           ▼
+┌──────────────────────────────────────────────┐
+│            ABC CLASSIFICATION ENGINE          │
+│                                              │
+│  A = Planned Event → DO                     │
+│  B = Urgent Event  → POSTPONE               │
+│  C = Captured Event → RECORD (to Inbox)     │
+└──────┬───────────────────────┬───────────────┘
+       │ A-Class               │ A-Class
+       ▼                       ▼
+┌──────────────┐     ┌─────────────────┐
+│   CALENDAR   │     │     LISTS       │
+│  (Commitments│     │  (Flexible)     │
+│   Few, Rigid │     │  Many, Adaptive │
+│   Auto-Remind│     │                 │
+│   FIRST shown│     │  Simple Mode:   │
+│              │     │   A/B/C files   │
+│              │     │  Advanced Mode: │
+│              │     │   @Home @Office │
+│              │     │   @Errands etc. │
+└──────────────┘     └─────────────────┘
 ```
 
-### The Priority Engine
+## The ABC255 Classification
 
-The Priority Engine uses a decision matrix combining energy level with goal alignment:
+This is the heart of the system. Every incoming task is classified by its **nature**, not just its importance.
 
-| | **High Goal Alignment** | **Low Goal Alignment** |
+| Class | Name | What It Is | What To Do |
+| :--- | :--- | :--- | :--- |
+| **A** | Planned Event | A task derived from your goals, plans, or reviews | **Do it** — route to Calendar or List |
+| **B** | Urgent Event | An unexpected interruption or someone else's priority | **Postpone it** — protect your A-class plan |
+| **C** | Captured Event | A raw thought or idea, importance unknown | **Record it** — goes to Inbox, processed later |
+
+> **Core Principle: Do A, Postpone B, Record C (做A，推B，记C)**
+
+For **A-class tasks**, a second layer of optimization uses the Energy/Goals matrix to determine the best time and method for execution.
+
+## The Inbox: Capture Everything
+
+The Inbox is an always-active sub-skill. Say "record" or "note" at any time, and the AI instantly captures your thought with zero friction — no questions asked, no classification needed. Items are processed later during Daily or Weekly Reviews using the **3 Questions + 4D Actions** framework.
+
+## Calendar vs. Lists
+
+| | **Calendar (Commitments)** | **Lists (Flexible Tasks)** |
 | :--- | :--- | :--- |
-| **High Energy (L3/L4)** | **Class A: High-Energy Priority** → Calendar or A-List | **Class C: Distraction** → C-List or Delete |
-| **Low Energy (L1/L2)** | **Class B: Mismatched** → Defer until energy recovers | **Class D: Trivial** → Delete or Delegate |
+| **Nature** | Hard landscape — non-negotiable | Soft landscape — do when convenient |
+| **Quantity** | Few and precise | Many and adaptive |
+| **Time** | Strictly bound to date/time | Optional start/due dates |
+| **Display** | **Always shown first** | Shown after calendar, filtered by context |
+| **Reminders** | Automatic reminders set | Only when due dates approach |
+| **Memory** | Permanent long-term storage | Permanent long-term storage |
 
-### The Dual-Track Execution (v2.1)
+## Two List Modes
 
-| Track | Purpose | Characteristics |
+| Mode | For Whom | How It Works |
 | :--- | :--- | :--- |
-| **Calendar** | Hard-landscape events (commitments) | Few, rigid, time-bound. Auto-syncs to external calendars. Sets automatic reminders. Stored in long-term memory. **Always displayed first.** |
-| **Lists** | Soft-landscape tasks (flexible) | Many, flexible, actionable. Organized by **context** (@Home, @Office, etc.). Supports start/due dates. Filtered by energy, time, and location. |
+| **Simple** (Default) | New users, low task volume | Three simple files: `a_tasks.md`, `b_tasks.md`, `c_tasks.md` |
+| **Advanced** (Contextual) | Busy users, high task volume | Context-based files: @Home, @Office, @Errands, @Calls, @Computer, @AI, @Waiting, Someday |
 
-### The "What Should I Do?" Logic
-
-When you ask "What should I do today?", the AI follows this precise logic:
-
-1.  **Calendar First**: Shows all committed events for the day. These are non-negotiable.
-2.  **Context Check**: Asks where you are (@Home, @Office, etc.), your energy level (L1-L4), and how much time you have.
-3.  **Smart Filter**: Reads only the relevant context list, then filters by priority, energy match, time available, and approaching due dates.
-4.  **Recommendation**: Presents a short, actionable list of tasks you can do *right now*.
-
-## Context-Based Lists (v2.1)
-
-Tasks are now organized by the **context** where they can be performed:
-
-| Context | File | Example Tasks |
-| :--- | :--- | :--- |
-| @Home | `@home.md` | Clean the study, organize bookshelf |
-| @Office | `@office.md` | Draft Q1 report, review contracts |
-| @Errands | `@errands.md` | Buy groceries, pick up dry cleaning |
-| @Calls | `@calls.md` | Call dentist, follow up with supplier |
-| @Computer | `@computer.md` | Update website, process expense reports |
-| @AI | `@ai.md` | Research competitors, summarize meeting notes |
-| @Waiting | `@waiting.md` | Waiting for John's feedback, waiting for delivery |
-| Someday | `someday.md` | Learn Spanish, write a novel |
-
-Each task includes optional **start_date** and **due_date** fields for time-aware filtering.
+The AI will automatically suggest upgrading to Advanced Mode when your lists grow beyond 15 items.
 
 ## Quick Start
 
-After installation, simply say one of the following:
-
 | Trigger Phrase | What Happens |
 | :--- | :--- |
-| "Help me plan my day" | Daily Review: Calendar first → context check → smart task recommendations |
-| "I have a new task" | Full workflow: energy → goals → priority → context → execution |
-| "Plan my week" | Weekly Review: 14-day calendar view + all context list reviews |
-| "I feel exhausted" | AI detects L1 energy, recommends rest, defers important tasks |
+| "Record: buy milk" | **Inbox capture** — instantly saved, no questions asked |
+| "Help me plan my day" | **Daily Review**: Calendar first → process Inbox → recommend tasks |
+| "I have a new task" | **ABC classification**: determines if it's A (do), B (postpone), or C (record) |
+| "Plan my week" | **Weekly Review**: 14-day calendar + full Inbox processing + list review |
+| "Meeting Tuesday 3 PM" | **Calendar Track**: stores event + syncs external calendar + sets reminder |
+| "I feel exhausted" | Detects low energy, recommends rest, defers A-class tasks |
 | "Set up my goals" | Waterdrop 520 goal-setting protocol |
-| "Meeting Tuesday 3 PM" | Calendar Track: stores event + syncs to external calendar + sets reminder |
-| "What can I do right now?" | Context-aware recommendation based on location, energy, and time |
 
 ## File Structure
 
@@ -96,26 +111,20 @@ After installation, simply say one of the following:
 productivity-skill/
 ├── skill.md                         # Core execution logic (the brain)
 ├── references/
+│   ├── inbox_rules.md               # Inbox sub-skill rules (capture & process)
+│   ├── priority_engine.md           # ABC255 classification engine
 │   ├── energy_engine.md             # Energy assessment rules (L1-L4)
 │   ├── goal_engine.md               # Goal management (Waterdrop 520 + Eight Areas)
-│   ├── priority_engine.md           # High-Energy Priority decision matrix
 │   ├── calendar_rules.md            # Calendar system rules (Hard Landscape)
-│   ├── list_rules.md                # List system rules (Context-based, Soft Landscape)
+│   ├── list_rules.md                # List system rules (Simple & Advanced modes)
 │   ├── core-theory.md               # Nine-Level Performance System theory
 │   └── core-methodology.md          # ABC255, PNAS, and more
 ├── memory/                          # (Created at runtime by the AI)
-│   ├── profile.md                   # User energy patterns and preferences
+│   ├── inbox.md                     # Universal capture inbox
+│   ├── profile.md                   # User preferences and list mode setting
 │   ├── goals.md                     # Annual goals (Waterdrop 520) + Eight Life Areas
 │   ├── calendar.md                  # Time-bound events with reminders
-│   └── lists/
-│       ├── @home.md                 # Tasks for home context
-│       ├── @office.md               # Tasks for office context
-│       ├── @errands.md              # Tasks requiring going out
-│       ├── @calls.md                # Tasks requiring phone calls
-│       ├── @computer.md             # Tasks requiring a computer
-│       ├── @ai.md                   # Tasks delegated to AI
-│       ├── @waiting.md              # Tasks delegated to others
-│       └── someday.md               # Someday/Maybe ideas
+│   └── lists/                       # Task lists (Simple or Advanced mode)
 ├── README.md
 ├── README_zh.md
 └── LICENSE
@@ -124,19 +133,16 @@ productivity-skill/
 ## Installation
 
 **Via ClawHub CLI (Recommended):**
-
 ```shell
 npx clawhub@latest install productivity-skill
 ```
 
-**Via GitHub URL (Paste into your AI assistant's chat):**
-
+**Via GitHub URL:**
 ```
 https://github.com/yewubin-jpg/productivity-skill
 ```
 
-**Manual Installation:**
-
+**Manual:**
 ```shell
 git clone https://github.com/yewubin-jpg/productivity-skill.git
 cp -r productivity-skill ~/.openclaw/skills/
@@ -144,29 +150,24 @@ cp -r productivity-skill ~/.openclaw/skills/
 
 ## The Origin
 
-This skill is built on the work of **Ye Wubin (叶武滨)**, founder of YiXiaoNeng (易效能), China's leading productivity institution. The methodology is protected by **Chinese national invention patents** and is based on 15 years of research, 1000+ live workshops across 10 countries, and millions of practitioners. The core book "High-Energy Priorities" (《高能要事》) and the Ximalaya course "Time Management 100 Lectures" (《时间管理100讲》) with 150M+ plays form the theoretical foundation.
+This skill is built on the work of **Ye Wubin (叶武滨)**, founder of YiXiaoNeng (易效能). The methodology is protected by **Chinese national invention patents** and is based on 15 years of research, 1000+ live workshops across 10 countries, and millions of practitioners.
 
-Learn more: [www.yixiaoneng.com](https://www.yixiaoneng.com) | Ximalaya: Search "时间管理100讲"
+Learn more: [www.yixiaoneng.com](https://www.yixiaoneng.com) | Ximalaya: Search "时间管理100讲" (150M+ plays)
 
 ## Support This Skill
 
 If this skill has helped you, please consider:
 
-*   **Star** this repository on [GitHub](https://github.com/yewubin-jpg/productivity-skill) to show your support
-*   **Like** and **Comment** on [ClawHub](https://clawhub.ai) to help others discover it
+*   **Star** this repository on [GitHub](https://github.com/yewubin-jpg/productivity-skill)
+*   **Like** and **Comment** on [ClawHub](https://clawhub.ai)
 *   **Share** it with friends who need better time management
-*   **Fork** and contribute improvements
 
-> "Every star, share, and review helps more people escape the productivity trap. Your support means the world to us."
-
-## Contributing
-
-We welcome contributions! Please feel free to submit a pull request or open an issue to discuss your ideas.
+> "Every star, share, and review helps more people escape the productivity trap."
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+MIT License — See [LICENSE](LICENSE) for details.
 
 ---
 
-*v2.1 — Context-based list management, calendar-first display logic, task dates, smart filtering, and external calendar integration.*
+*v2.2 — True ABC255 classification, universal Inbox sub-skill, two-layer priority system, dual list modes, and 3Q4D processing.*

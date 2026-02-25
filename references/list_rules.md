@@ -1,87 +1,88 @@
-# List System Rules v2.1
+# List System Rules v2.2
 
 ## Directive
 
-The List System is the flexible, dynamic container for all non-calendar tasks. It is now organized by **context**, allowing the user to see what they can do *right now*, based on where they are and what tools they have. You are the manager of this system, ensuring every task is captured, classified, and contextualized.
+The List System is the flexible container for all **A-Class (Planned)** tasks that are not hard-landscape calendar events. It now operates in two modes to adapt to the user's complexity.
 
-## Core Principle: Context is King
+## Two Modes of Operation
 
-If a task is not a "Hard Landscape" event for the calendar, it belongs here. The primary organization is no longer A/B/C, but the **context** in which the task can be performed.
+1.  **Simple Mode (Default)**: For users getting started or with a low volume of tasks. Uses a simple A/B/C list structure.
+2.  **Advanced Mode (Contextual)**: For busy users who need more granular organization. Uses the context-based lists (@Home, @Office, etc.).
 
-## The New File Structure: Contextual Lists
+**You must actively suggest upgrading to Advanced Mode** when you detect the user's lists are becoming long or they express feeling overwhelmed.
+*   *Suggestion Prompt*: "我注意到您的清单越来越长了。为了帮助您更好地在不同场景下聚焦，我建议为您开启‘情景清单’高级模式。这将把您的任务分散到 @在家、@办公室、@外出 等不同情景中。您想现在升级吗？"
 
-All list tasks are now stored in files corresponding to their primary context, located in `/home/ubuntu/productivity-skill/memory/lists/`.
-
-| File / Context | Purpose |
-| :--- | :--- |
-| `@home.md` | Tasks that can only be done at home. |
-| `@office.md` | Tasks that require being at the office. |
-| `@errands.md` | Tasks that require being out and about (e.g., shopping, post office). |
-| `@calls.md` | Tasks that require making a phone call. |
-| `@computer.md` | Tasks that require a computer (default for most work). |
-| `@ai.md` | Tasks specifically delegated to you, the AI assistant. |
-| `@waiting.md` | Tasks delegated to others, tracking their progress. |
-| `someday.md` | Ideas and tasks with no commitment. To be reviewed monthly. |
-
-## The New Task Format (v2.1)
-
-All tasks **must** be recorded in this extended YAML-like format within the appropriate context file. Each task is a multi-line entry.
-
-```markdown
-- task: "Draft the Q1 marketing report"
-  status: "todo"  # todo, in-progress, done
-  priority: "A"  # A, B, C, D
-  project: "#Q1-Marketing-Push"
-  start_date: "YYYY-MM-DD"  # Optional
-  due_date: "YYYY-MM-DD"  # Optional
-  notes: "Initial data is in the shared drive."
 ---
-```
 
-*   **task**: A clear, action-oriented description.
-*   **status**: The current state of the task.
-*   **priority**: The A/B/C/D classification from the Priority Engine.
-*   **project**: The associated project tag.
-*   **start_date**: The earliest date the task can be worked on.
-*   **due_date**: The date the task needs to be completed by.
-*   **notes**: Any additional details.
-*   The `---` separator is crucial for parsing individual tasks.
+## Simple Mode: The A/B/C Lists
 
-## The Protocol v2.1
+*   **File Structure**:
+    *   `memory/lists/a_tasks.md`: Planned, important tasks.
+    *   `memory/lists/b_tasks.md`: Urgent tasks that were postponed.
+    *   `memory/lists/c_tasks.md`: Processed items from the Inbox that are low priority.
+*   **Task Format**: A simple, single-line format.
+    ```markdown
+    - [ ] [Task Description] #ProjectTag
+    ```
 
-1.  **Receive a Task**: A task is routed here from the Priority Engine with a Class (A, B, C, D).
+## Advanced Mode: Contextual Lists
 
-2.  **Determine Context**: Ask the user for the context. **This is a required step.**
-    *   *Instruction*: "好的，我将这个任务归类为 **A类高能要事**。请问您主要会在哪里处理这个任务？例如：**@电脑前**、**@办公室**、**@在家**，还是需要**@外出**办理？"
+*   **File Structure**:
+    *   `memory/lists/@home.md`
+    *   `memory/lists/@office.md`
+    *   `memory/lists/@errands.md`
+    *   `memory/lists/@calls.md`
+    *   `memory/lists/@computer.md`
+    *   `memory/lists/@ai.md`
+    *   `memory/lists/@waiting.md`
+    *   `memory/lists/someday.md`
+*   **Task Format**: The detailed multi-line YAML format.
+    ```markdown
+    - task: "Draft the Q1 marketing report"
+      status: "todo"
+      priority: "A" 
+      project: "#Q1-Marketing-Push"
+      start_date: "YYYY-MM-DD"
+      due_date: "YYYY-MM-DD"
+      notes: "Initial data is in the shared drive."
+    ---
+    ```
 
-3.  **Gather Dates (Optional)**: Ask if there are any relevant dates.
-    *   *Instruction*: "这个任务有开始日期或截止日期吗？"
+---
 
-4.  **Write to Memory**: Based on the context, open the corresponding file (e.g., `memory/lists/@computer.md`) and append the new task using the full YAML format.
+## The Protocol v2.2
 
-5.  **PNAS Decomposition**: The PNAS process remains the same. When a large task is decomposed, each sub-task must also be assigned a context and recorded in the new format in the appropriate file.
+1.  **Receive a Task**: A task is routed here from the Priority Engine. It will almost always be **Class A**, as B and C are handled differently.
 
-## The New Display Logic
+2.  **Check User Mode**: Check a setting in `memory/profile.md` to see if the user is in `mode: simple` or `mode: advanced`.
 
-When the user asks, "What should I do today?" or "What are my tasks?", you must follow this new, sophisticated display logic:
+3.  **Route to Correct Mode**:
 
-1.  **State the Hierarchy**: First, tell the user the principle: "好的，我们先看日历上的承诺，再看清单里的弹性安排。"
+    *   **If in Simple Mode**:
+        *   Append the task to `memory/lists/a_tasks.md` in the simple format.
 
-2.  **Display Calendar Events**: Read `memory/calendar.md` and display all events for today. These are non-negotiable commitments.
+    *   **If in Advanced Mode**:
+        *   **Determine Context (Required)**: Ask the user for the context (@Home, @Office, etc.).
+        *   **Gather Dates (Optional)**: Ask for start/due dates.
+        *   **Write to Memory**: Append the task to the correct context file (e.g., `memory/lists/@computer.md`) in the detailed YAML format.
 
-3.  **Assess Current Context**: Ask the user for their current situation. 
-    *   *Instruction*: "现在，为了给您最合适的建议，请告诉我您现在的情况：
-        *   **能量状态是？** (L1-L4)
-        *   **您在哪里？** (@家, @办公室, @外出)
-        *   **有多少空闲时间？** (例如：30分钟，2小时)"
+## The Display Logic v2.2
 
-4.  **Filter and Display Lists**: Based on the user's context, filter and present tasks from the list files.
-    *   **Filter 1 (Context)**: Read tasks only from the relevant context file (e.g., if user is `@home`, read `@home.md`).
-    *   **Filter 2 (Energy)**: If energy is low (L1/L2), prioritize showing `priority: C` tasks. If energy is high (L3/L4), prioritize showing `priority: A` and `priority: B` tasks.
-    *   **Filter 3 (Time)**: Don't show a 2-hour task if the user only has 30 minutes.
-    *   **Filter 4 (Date)**: Show tasks whose `start_date` is today or past, and whose `due_date` is approaching.
+When the user asks, "What should I do today?"
 
-5.  **Present Recommendations**: Present a short, actionable list.
-    *   *Example*: "好的，根据您现在**在办公室**，**精力充沛 (L3)**，并且有**大约1小时**的空闲时间，这里有几个 **A类高能要事** 推荐您处理：
-        *   `[ ] Draft the Q1 marketing report (截止日期: 明天)`
-        *   `[ ] Review the new website mockup`"
+1.  **State the Hierarchy**: "好的，我们先看日历上的承诺，再看清单里的弹性安排。"
+
+2.  **Display Calendar**: Show today's events from `memory/calendar.md`.
+
+3.  **Assess Current Context**: Ask for Energy, Location, and Time available.
+
+4.  **Filter and Display Lists (Mode-Aware)**:
+
+    *   **If in Simple Mode**:
+        *   Read `a_tasks.md`.
+        *   Present the top 3-5 tasks, perhaps mentioning any B-class items from `b_tasks.md` if they are now due.
+
+    *   **If in Advanced Mode**:
+        *   Read only the list file matching the user's current location (e.g., `@office.md`).
+        *   Apply the smart filters (Energy, Time, Due Date) to the tasks within that file.
+        *   Present a short, highly relevant list of recommendations.
