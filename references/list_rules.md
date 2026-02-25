@@ -1,56 +1,87 @@
-# List System Rules
+# List System Rules v2.1
 
 ## Directive
 
-The List System is the flexible, dynamic counterpart to the rigid Calendar. It is designed to hold all tasks, ideas, and commitments that are not time-bound. You are the manager of this system, ensuring everything is captured, classified, and actionable.
+The List System is the flexible, dynamic container for all non-calendar tasks. It is now organized by **context**, allowing the user to see what they can do *right now*, based on where they are and what tools they have. You are the manager of this system, ensuring every task is captured, classified, and contextualized.
 
-## Core Principle: Soft Landscape
+## Core Principle: Context is King
 
-If a task is not a "Hard Landscape" event for the calendar, it belongs here. This is the default destination for most user inputs.
+If a task is not a "Hard Landscape" event for the calendar, it belongs here. The primary organization is no longer A/B/C, but the **context** in which the task can be performed.
 
-## The File Structure
+## The New File Structure: Contextual Lists
 
-All lists are stored as separate Markdown files in `/home/ubuntu/productivity-skill/memory/lists/`.
+All list tasks are now stored in files corresponding to their primary context, located in `/home/ubuntu/productivity-skill/memory/lists/`.
 
-| File | Purpose |
+| File / Context | Purpose |
 | :--- | :--- |
-| `a_tasks.md` | **High-Energy Priority Tasks**. The most important things to do when energy is high. |
-| `b_tasks.md` | **Mismatched Tasks**. Important tasks deferred due to low energy. |
-| `c_tasks.md` | **Scheduled Distractions**. Low-priority tasks to be done when energy is low. |
-| `someday.md` | **Someday/Maybe**. Ideas and tasks with no commitment. To be reviewed monthly. |
-| `waiting.md` | **Waiting For**. Tasks delegated to others. Include the person's name and date. |
+| `@home.md` | Tasks that can only be done at home. |
+| `@office.md` | Tasks that require being at the office. |
+| `@errands.md` | Tasks that require being out and about (e.g., shopping, post office). |
+| `@calls.md` | Tasks that require making a phone call. |
+| `@computer.md` | Tasks that require a computer (default for most work). |
+| `@ai.md` | Tasks specifically delegated to you, the AI assistant. |
+| `@waiting.md` | Tasks delegated to others, tracking their progress. |
+| `someday.md` | Ideas and tasks with no commitment. To be reviewed monthly. |
 
-## The Protocol
+## The New Task Format (v2.1)
 
-1.  **Receive a Task**: A task is routed here from the Priority Engine.
+All tasks **must** be recorded in this extended YAML-like format within the appropriate context file. Each task is a multi-line entry.
 
-2.  **Classify and Route**: Based on the Class (A, B, C, D) assigned by the Priority Engine, append the task to the correct file.
-    *   Class A → `a_tasks.md`
-    *   Class B → `b_tasks.md`
-    *   Class C → `c_tasks.md`
-    *   Class D (if user insists) → `someday.md`
+```markdown
+- task: "Draft the Q1 marketing report"
+  status: "todo"  # todo, in-progress, done
+  priority: "A"  # A, B, C, D
+  project: "#Q1-Marketing-Push"
+  start_date: "YYYY-MM-DD"  # Optional
+  due_date: "YYYY-MM-DD"  # Optional
+  notes: "Initial data is in the shared drive."
+---
+```
 
-3.  **Use the Standard Format**: All tasks must be recorded in the following format:
+*   **task**: A clear, action-oriented description.
+*   **status**: The current state of the task.
+*   **priority**: The A/B/C/D classification from the Priority Engine.
+*   **project**: The associated project tag.
+*   **start_date**: The earliest date the task can be worked on.
+*   **due_date**: The date the task needs to be completed by.
+*   **notes**: Any additional details.
+*   The `---` separator is crucial for parsing individual tasks.
 
-    ```markdown
-    - [ ] [Task Description] @Context #Tag
-    ```
-    *   **[Task Description]**: A clear, action-oriented description (e.g., "Draft the Q1 report").
-    *   **@Context**: Use T/STEP contexts (`@time`, `@space`, `@tool`, `@energy`, `@people`). This allows for filtering. For example, `@energy(L4)` means this task requires peak energy.
-    *   **#Tag**: A project or area tag (e.g., `#marketing`, `#personal`).
+## The Protocol v2.1
 
-4.  **PNAS Decomposition for Large Tasks**:
-    *   If a Class A task is large and complex (e.g., "Write a book"), you must ask the user: "这是一个重要项目，我们是否需要使用 PNAS 方法将其分解为更小的行动步骤？"
-    *   If they agree, guide them through the PNAS process (Picture → Nouns → Actions → Sequence).
-    *   Create a **new project file** for the decomposed steps, e.g., `lists/project_write_book.md`.
-    *   Each step in the project file should also follow the standard task format.
+1.  **Receive a Task**: A task is routed here from the Priority Engine with a Class (A, B, C, D).
 
-5.  **Managing the `waiting.md` List**:
-    *   When a user mentions they have delegated a task, ask for details.
-    *   **Instruction**: "好的，您已经将 [任务] 委托给了 [谁]。我会将其记录在‘等待清单’中，并标注今天的日期。"
-    *   **Format**: `- [ ] Waiting for [Person's Name] to complete [Task] (Delegated on YYYY-MM-DD) #project_tag`
+2.  **Determine Context**: Ask the user for the context. **This is a required step.**
+    *   *Instruction*: "好的，我将这个任务归类为 **A类高能要事**。请问您主要会在哪里处理这个任务？例如：**@电脑前**、**@办公室**、**@在家**，还是需要**@外出**办理？"
 
-## Review Protocols
+3.  **Gather Dates (Optional)**: Ask if there are any relevant dates.
+    *   *Instruction*: "这个任务有开始日期或截止日期吗？"
 
-*   **Daily Review**: When planning the user's day, present the tasks from `a_tasks.md` as the top priorities. Then, if energy allows, suggest tasks from `b_tasks.md` or `c_tasks.md`.
-*   **Weekly Review**: Review all lists. Check for overdue items. Ask the user about items in `waiting.md`. Review the `someday.md` list for any items that have become relevant.
+4.  **Write to Memory**: Based on the context, open the corresponding file (e.g., `memory/lists/@computer.md`) and append the new task using the full YAML format.
+
+5.  **PNAS Decomposition**: The PNAS process remains the same. When a large task is decomposed, each sub-task must also be assigned a context and recorded in the new format in the appropriate file.
+
+## The New Display Logic
+
+When the user asks, "What should I do today?" or "What are my tasks?", you must follow this new, sophisticated display logic:
+
+1.  **State the Hierarchy**: First, tell the user the principle: "好的，我们先看日历上的承诺，再看清单里的弹性安排。"
+
+2.  **Display Calendar Events**: Read `memory/calendar.md` and display all events for today. These are non-negotiable commitments.
+
+3.  **Assess Current Context**: Ask the user for their current situation. 
+    *   *Instruction*: "现在，为了给您最合适的建议，请告诉我您现在的情况：
+        *   **能量状态是？** (L1-L4)
+        *   **您在哪里？** (@家, @办公室, @外出)
+        *   **有多少空闲时间？** (例如：30分钟，2小时)"
+
+4.  **Filter and Display Lists**: Based on the user's context, filter and present tasks from the list files.
+    *   **Filter 1 (Context)**: Read tasks only from the relevant context file (e.g., if user is `@home`, read `@home.md`).
+    *   **Filter 2 (Energy)**: If energy is low (L1/L2), prioritize showing `priority: C` tasks. If energy is high (L3/L4), prioritize showing `priority: A` and `priority: B` tasks.
+    *   **Filter 3 (Time)**: Don't show a 2-hour task if the user only has 30 minutes.
+    *   **Filter 4 (Date)**: Show tasks whose `start_date` is today or past, and whose `due_date` is approaching.
+
+5.  **Present Recommendations**: Present a short, actionable list.
+    *   *Example*: "好的，根据您现在**在办公室**，**精力充沛 (L3)**，并且有**大约1小时**的空闲时间，这里有几个 **A类高能要事** 推荐您处理：
+        *   `[ ] Draft the Q1 marketing report (截止日期: 明天)`
+        *   `[ ] Review the new website mockup`"

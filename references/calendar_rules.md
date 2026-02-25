@@ -1,12 +1,12 @@
-# Calendar System Rules
+# Calendar System Rules v2.1
 
 ## Directive
 
-The Calendar is the user's sacred space. It is for the few, critical, time-bound commitments that structure their life and work. Your job is to be the strict gatekeeper of the calendar.
+The Calendar is the user's sacred space, representing **unbreakable commitments**. It is the absolute source of truth for their schedule. Your job is to be the strict gatekeeper of the calendar and ensure it is always respected as the top priority.
 
-## Core Principle: Hard Landscape
+## Core Principle: Calendar First, Always
 
-Only events that are part of the "Hard Landscape" can enter the calendar. These are events with **fixed, non-negotiable dates and times**.
+In any review or planning session, **Calendar events are always presented first**. They are promises the user has made. Lists are flexible tasks to be done *around* these commitments.
 
 | Allowed in Calendar | NOT Allowed in Calendar |
 | :--- | :--- |
@@ -20,12 +20,11 @@ Tasks without a specific time belong in the **List System**.
 
 ## The Protocol
 
-1.  **Identify a Calendar-Worthy Event**: When a user mentions a task that meets the "Hard Landscape" criteria (e.g., "I have a meeting with John next Tuesday at 10 AM"), you must identify it as a calendar event.
+1.  **Identify a Calendar-Worthy Event**: When a user mentions a task with a specific, non-negotiable date and time, identify it as a calendar event.
 
-2.  **Confirm the Details**: Re-confirm all details with the user: **Title, Date, and Time**. 
-    *   *Example*: "确认一下：会议，主题是‘与John讨论Q3计划’，时间是下周二上午10点。对吗？"
+2.  **Confirm the Details**: Re-confirm all details: **Title, Date, and Time**.
 
-3.  **Write to Memory**: Once confirmed, append the event to `/home/ubuntu/productivity-skill/memory/calendar.md`. Use the exact format below:
+3.  **Write to Internal Memory**: Append the event to `/home/ubuntu/productivity-skill/memory/calendar.md`. This file is the skill's internal, permanent long-term memory.
 
     ```markdown
     - [ ] YYYY-MM-DD HH:MM [Event Title] #Tag
@@ -33,16 +32,16 @@ Tasks without a specific time belong in the **List System**.
     *   **Example**: `- [ ] 2026-03-04 10:00 Meeting with John re: Q3 Plan #work`
 
 4.  **Set a Reminder (CRITICAL STEP)**:
-    *   This is the most important step. You **must** use your available tools (like the `schedule` tool) to set a reminder for the user.
-    *   **Instruction to yourself**: "I will now use the `schedule` tool to set a reminder for this event."
+    *   Use the `schedule` tool to set a reminder for the user. This is non-negotiable.
     *   **Inform the user**: "我已经将这个事件添加到您的日历记忆中，并为您设置了开始前15分钟的提醒。"
-    *   This action bridges the gap between passive recording and active assistance.
 
-5.  **Mark as Complete**: When the user informs you that a calendar event is done, you must find the corresponding line in `calendar.md` and change `[ ]` to `[x]`.
+5.  **External System Integration (Aspirational)**:
+    *   **Check for Tools**: Before writing to the internal memory, check if any external calendar tools (e.g., a Google Calendar MCP server) are available.
+    *   **Prioritize External Tools**: If an external tool exists, use it to create the event directly in the user's real calendar. This is the preferred method.
+    *   **Inform the User**: "我已经将这个事件直接同步到了您的 Google 日历，并为您设置了提醒。"
+    *   **Fallback**: If no external tools are available, fall back to using the internal `calendar.md` memory and the `schedule` tool.
 
-## The Two-Week View
+## Long-Term Memory & Display
 
-When the user asks to "plan my week" or "what's coming up", you should present a view of the next 14 days from `calendar.md`. This aligns with the Level 3 "Two-Week Calendar" methodology.
-
-*   **Instruction**: "好的，这是您未来两周的日历安排："
-*   Then, list all events from `calendar.md` that fall within the next 14 days.
+*   All events in `calendar.md` are **permanent** unless the user explicitly deletes them. You must read this file whenever the user asks about their schedule.
+*   When asked to plan a day or week, you will always read from this file first and present its contents before moving on to the flexible list items.
