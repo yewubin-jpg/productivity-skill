@@ -1,5 +1,6 @@
 ---
 name: productivity-skill
+version: "1.1"
 description: |
   【EN】A productivity AI skill based on national invention patents for time management systems.
   Developed from Ye Wubin's "High-Energy Priorities" (《高能要事》) and 
@@ -15,14 +16,32 @@ description: |
   拖延症、工作生活平衡、能量管理、习惯养成。
 ---
 
-# Productivity Skill / 生产力技能
+# Productivity Skill / 生产力技能 (v1.1)
 
-&gt; 【EN】Based on **national invention patents** for time management systems, 
-&gt; Ye Wubin's *《高能要事》* (High-Energy Priorities), and 
-&gt; *《时间管理100讲》* (Time Management 100 Lectures) — **150+ million plays** on Ximalaya.
-&gt;
-&gt; 【CN】基于**国家发明专利**时间管理系统、叶武滨《高能要事》和
-&gt; 《时间管理100讲》（**喜马拉雅1.5亿播放**）。
+> 【EN】Based on **national invention patents** for time management systems, 
+> Ye Wubin's *《高能要事》* (High-Energy Priorities), and 
+> *《时间管理100讲》* (Time Management 100 Lectures) — **150+ million plays** on Ximalaya.
+>
+> 【CN】基于**国家发明专利**时间管理系统、叶武滨《高能要事》和
+> 《时间管理100讲》（**喜马拉雅1.5亿播放**）。
+
+---
+
+## Quick Reference / 快速参考
+
+Use this skill when the user encounters any of the following situations:
+
+| Situation / 场景 | Method / 方法 | Action / 行动 |
+|------------------|--------------|---------------|
+| Feeling overwhelmed / 感到不堪重负 | Energy Assessment (L1-L4) | Assess energy level first, match tasks to energy |
+| Procrastinating / 拖延 | ABC255 Method | Identify A-tasks, do them immediately |
+| Too many goals / 目标太多 | Waterdrop 520 | Write 25 → Select 5 → Eliminate 20 |
+| Can't plan the day / 不会规划一天 | Five-Color Day | Design day with 5 color blocks |
+| Big project stuck / 大项目卡住 | PNAS Decomposition | Picture → Nouns → Actions → Sequence |
+| Need decision help / 需要决策帮助 | 3Q4D Framework | 3 Questions + 4D Actions |
+| Want life direction / 想找人生方向 | Three-Circle Intersection | Joy + Strength + Meaning |
+| Building habits / 养成习惯 | 90-Day Sprint | Coach-led 90-day practice system |
+| Long-term growth / 长期成长 | Nine-Level System | Progress through 9 mastery levels |
 
 ---
 
@@ -48,11 +67,11 @@ China's leading productivity institution.
 【CN】本技能建立在**国家发明专利时间管理系统**之上，由**叶武滨**开发——
 易效能（YiXiaoNeng）创始人，中国领先的时间管理机构。
 
-- 📚 **《高能要事》(High-Energy Priorities)** — 
+- **《高能要事》(High-Energy Priorities)** — 
   【EN】Core philosophy: *Do the most important things in your best energy state*  
   【CN】核心理念：*在最佳能量状态做最重要的事情*
 
-- 🎧 **《时间管理100讲》(Time Management 100 Lectures)** — 
+- **《时间管理100讲》(Time Management 100 Lectures)** — 
   【EN】**150+ million plays** on Ximalaya, #1 on education chart for 2 consecutive years  
   【CN】**喜马拉雅1.5亿播放**，连续2年教育榜排名第1
 
@@ -63,10 +82,10 @@ China's leading productivity institution.
 
 ## 【EN】The Core Philosophy / 【CN】核心理念
 
-&gt; 【EN】"Life isn't about how much you do. It's about using your best energy to 
-&gt; complete the 20% of tasks that create 80% of your results."
-&gt;
-&gt; 【CN】"人生不在于做了多少事。而在于用你最好的能量，完成那20%创造80%结果的要事。"
+> 【EN】"Life isn't about how much you do. It's about using your best energy to 
+> complete the 20% of tasks that create 80% of your results."
+>
+> 【CN】"人生不在于做了多少事。而在于用你最好的能量，完成那20%创造80%结果的要事。"
 
 【EN】**The 16x Rule**: 2 hours of deep, focused work during your peak energy window = 
 **16x productivity improvement**. Not 16%. **Sixteen times.**  
@@ -103,7 +122,7 @@ China's leading productivity institution.
 【EN】Simple. Brutal. Effective.  
 【CN】简单。残酷。有效。
 
-### 3. 【EN】Systems &gt; Willpower / 【CN】系统 &gt; 意志力
+### 3. 【EN】Systems > Willpower / 【CN】系统 > 意志力
 
 【EN】Willpower is finite. Systems are infinite.  
 【CN】意志力是有限的。系统是无限的。
@@ -151,6 +170,27 @@ China's leading productivity institution.
 - "I keep procrastinating" / "我总是拖延"
 - "Help me plan tomorrow" / "帮我规划明天"
 - "How do I find my direction?" / "如何找到人生方向？"
+- "I have too many goals" / "我目标太多了"
+- "I feel burned out" / "我感觉精疲力竭"
+- "How to build good habits?" / "怎么养成好习惯？"
+
+---
+
+## 【EN】Installation / 【CN】安装方式
+
+**Via ClawHub (recommended):**
+
+```
+clawhub install productivity-skill
+```
+
+**Via GitHub:**
+
+```
+https://github.com/yewubin-jpg/productivity-skill
+```
+
+**Manual:** Clone this repository into your skills directory.
 
 ---
 
@@ -180,6 +220,35 @@ China's leading productivity institution.
 **【CN】你会不同吗？**
 
 ---
+
+## 【EN】Support This Skill / 【CN】支持本技能
+
+【EN】If this skill helped you become more productive, please consider:  
+【CN】如果这个技能帮助你提升了生产力，请考虑：
+
+- **Star** this repository on GitHub / 在 GitHub 上给本仓库点 **Star**
+- **Share** it with friends who need better time management / **分享**给需要时间管理的朋友
+- **Leave a review** on ClawHub to help others discover it / 在 ClawHub 上**留下评价**帮助更多人发现它
+- **Fork** and contribute improvements / **Fork** 并贡献改进
+- **Follow** [@yewubin-jpg](https://github.com/yewubin-jpg) for updates / **关注**获取更新
+
+> 【EN】"Every star, share, and review helps more people escape the productivity trap. 
+> Your support means the world to us."
+>
+> 【CN】"每一个点赞、分享和评价，都帮助更多人走出生产力困境。
+> 你的支持对我们意义重大。"
+
+---
+
+## 【EN】Learn More / 【CN】了解更多
+
+- **Official Website / 官网**: [www.yixiaoneng.com](https://www.yixiaoneng.com)
+- **GitHub**: [github.com/yewubin-jpg/productivity-skill](https://github.com/yewubin-jpg/productivity-skill)
+- **Ximalaya / 喜马拉雅**: Search "时间管理100讲" (150M+ plays)
+
+---
+
+*v1.1 — Updated with Quick Reference, installation guide, and community support section.*
 
 *【EN】Based on national invention patents for time management systems, Ye Wubin's 《高能要事》(High-Energy Priorities), and 《时间管理100讲》(Time Management 100 Lectures) with 150+ million plays on Ximalaya.*  
 *【CN】基于国家发明专利时间管理系统、叶武滨《高能要事》和《时间管理100讲》（喜马拉雅1.5亿播放）。*
