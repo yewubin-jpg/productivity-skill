@@ -1,4 +1,4 @@
-# 生产力技能 (Productivity Skill) for OpenClaw (v1.1)
+# 生产力技能 v2.0 — 智能执行引擎
 
 **[English](./README.md) | [中文](./README_zh.md)**
 
@@ -8,52 +8,97 @@
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT 许可证](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![版本](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![版本](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
-> **一款基于国家发明专利时间管理系统的 AI 生产力技能。源自叶武滨老师的《高能要事》与喜马拉雅播放量超 1.5 亿的《时间管理100讲》。**
+> **不只是知识库 — 这是一个AI驱动的智能执行系统。** 基于叶武滨国家发明专利时间管理方法论，喜马拉雅播放量超1.5亿。
 
-这是一个为 OpenClaw 等 AI 助手平台设计的智能技能，旨在帮助用户掌控自己的时间、能量和注意力。它不只是又一个待办事项应用，而是一个基于 15 年研究和数百万人实践、用于实现巅峰效能的完整系统。
+这个技能将您的AI助手转变为一个**主动的生产力执行官**，它会主动评估您的能量状态、将任务与目标对齐，并通过日历/清单双轨制来管理您的所有事务 — 全部具备持久化记忆和自动提醒功能。
 
-## 快速参考
+## v2.0 重大升级
 
-| 场景 | 方法 | 行动 |
-|------|------|------|
-| 感到不堪重负 | 能量评估 (L1-L4) | 先评估能量等级 |
-| 拖延 | ABC255 方法 | 做A，推B，记C |
-| 目标太多 | 水滴520 | 写25个 → 选5个 → 划掉20个 |
-| 不会规划一天 | 五色一天 | 用5种颜色设计一天 |
-| 大项目卡住 | PNAS 分解法 | 画面 → 名词 → 行动 → 排序 |
-| 需要决策帮助 | 3问4D框架 | 3个问题 + 4D行动 |
-| 想找人生方向 | 三圈交集 | 热爱 + 擅长 + 意义 |
-| 养成习惯 | 90天冲刺 | 教练带领的践行系统 |
-| 长期成长 | 九段效能系统 | 9个掌控等级 |
+v2.0 是一次完整的架构重写，从被动的知识库进化为主动的、有状态的智能执行引擎。
 
-## 核心理念：能量是一切
+| 功能 | v1.x（知识型） | v2.0（执行型） |
+| :--- | :--- | :--- |
+| **能量评估** | 理论中提及 | AI在每次决策前主动评估您的L1-L4能量状态 |
+| **目标管理** | 描述了水滴520方法 | AI引导您完成完整的520流程，并将目标存入持久化记忆 |
+| **任务分类** | 解释了ABC分类 | AI使用决策矩阵（能量×目标）自动分类每一个任务 |
+| **日历** | 描述了两周日历概念 | AI将事件写入持久化日历文件，并**设置自动提醒** |
+| **清单** | 描述了弹性清单 | AI管理5+子清单（A/B/C/等待/某天），支持上下文标签和PNAS分解 |
+| **记忆** | 无 | 完整的持久化记忆系统：用户档案、目标、日历、任务清单 |
 
-时间不是你的问题，能量才是。本技能建立在一个简单而强大的理念之上：**用你最好的精力状态，去做最重要的事情。**
+## 工作原理
 
-我们称之为 **16 倍效能法则**：每天在你的精力高峰期进行 2 小时深度、专注的工作，可以带来高达 16 倍的生产力提升。
+技能在每次交互中都遵循严格的工作流：
 
-## 技能包含什么？
+```
+输入 → 能量评估 → 目标对齐 → 优先级分类 → 双轨执行
+```
 
-本技能浓缩了"易效能"系统的全部精华，包括：
+**优先级引擎**使用决策矩阵，结合您的能量水平和目标关联性来分类每一个任务：
 
-*   **九段效能系统**：从单一专注到掌控人生的分步指南。
-*   **ABC255 工作法**：一个极致的优先级排序和执行框架（做 A，推 B，记 C）。
-*   **PNAS 项目分解法**：将任何目标分解为可执行步骤的方法（Picture → Nouns → Actions → Sequence）。
-*   **水滴 520 目标法**：一个帮助你聚焦于 5 个最关键目标并排除其他干扰的系统。
-*   **3问4D 决策框架**：3个问题（要不要做？想要的结果？第一步行动？）+ 4D行动（删除、推迟、委托、做）。
-*   **能量优先方法**：管理你的体力、情绪、脑力和心力，以维持卓越表现。
+| | **高目标关联** | **低目标关联** |
+| :--- | :--- | :--- |
+| **高能量 (L3/L4)** | **A类：高能要事** → 进入日历或A清单 | **C类：计划中的干扰** → 进入C清单或建议删除 |
+| **低能量 (L1/L2)** | **B类：能量错配** → 推迟到能量恢复后 | **D类：琐事** → 建议删除或委托 |
+
+**双轨执行**将任务路由到合适的系统：
+
+| 轨道 | 用途 | 特点 |
+| :--- | :--- | :--- |
+| **日历** | 硬性约束事件 | 少而精、严格时间绑定、自动提醒、进入长期记忆 |
+| **清单** | 弹性任务 | 多而活、灵活分类、可调整、支持PNAS项目分解 |
+
+## 快速开始
+
+安装后，直接对AI助手说以下任何一句话即可触发：
+
+| 触发语 | 触发效果 |
+| :--- | :--- |
+| "帮我规划今天" | 日回顾：能量检查 → 日历概览 → 今日A类任务 |
+| "我有个新任务" | 完整工作流：能量 → 目标 → 优先级 → 执行 |
+| "规划我的一周" | 周回顾：两周日历视图 + 全部清单回顾 |
+| "我好累" | AI识别L1能量，建议休息，推迟重要任务 |
+| "设定我的目标" | 触发水滴520目标设定协议 |
+| "下周二下午3点有个会" | 日历轨道：存储事件 + 设置自动提醒 |
+
+## 文件结构
+
+```
+productivity-skill/
+├── skill.md                         # 核心执行逻辑（大脑）
+├── references/
+│   ├── energy_engine.md             # 能量评估规则 (L1-L4)
+│   ├── goal_engine.md               # 目标管理（水滴520 + 八大关注）
+│   ├── priority_engine.md           # 高能要事决策矩阵
+│   ├── calendar_rules.md            # 日历系统规则（硬性约束）
+│   ├── list_rules.md                # 清单系统规则（弹性任务）
+│   ├── core-theory.md               # 九段效能系统理论
+│   └── core-methodology.md          # ABC255、PNAS 等方法论
+├── memory/                          # （运行时由AI自动创建）
+│   ├── profile.md                   # 用户能量节律和偏好
+│   ├── goals.md                     # 年度目标（水滴520）+ 八大关注领域
+│   ├── calendar.md                  # 有时间约束的事件及提醒
+│   └── lists/
+│       ├── a_tasks.md               # 高能要事
+│       ├── b_tasks.md               # 推迟的重要任务
+│       ├── c_tasks.md               # 低优先级任务
+│       ├── someday.md               # 某天/也许
+│       └── waiting.md               # 委托他人的任务
+├── README.md
+├── README_zh.md
+└── LICENSE
+```
 
 ## 如何安装
 
-**通过 ClawHub（推荐）：**
+**通过 ClawHub CLI（推荐）：**
 
-```bash
-clawhub install productivity-skill
+```shell
+npx clawhub@latest install productivity-skill
 ```
 
-**通过 GitHub 链接（粘贴到你的 AI 助手中）：**
+**通过 GitHub 链接（粘贴到AI助手对话中）：**
 
 ```
 https://github.com/yewubin-jpg/productivity-skill
@@ -61,68 +106,36 @@ https://github.com/yewubin-jpg/productivity-skill
 
 **手动安装：**
 
-```bash
-git clone https://github.com/yewubin-jpg/productivity-skill.git ~/.openclaw/skills/productivity-skill
+```shell
+git clone https://github.com/yewubin-jpg/productivity-skill.git
+cp -r productivity-skill ~/.openclaw/skills/
 ```
 
-## 如何使用
+## 关于方法论
 
-安装后，你就可以和你的 AI 助手对话了。以下是一些示例：
+本技能基于**叶武滨**先生的研究成果。叶武滨是易效能创始人，中国领先的时间管理教育机构创办者。该方法论受**中国国家发明专利**保护，基于15年研究、10个国家1000+场线下工作坊、数百万实践者的经验。核心著作《高能要事》和喜马拉雅课程《时间管理100讲》（播放量超1.5亿，连续两年教育榜第一）构成了理论基础。
 
-*   `"我的主要项目总是拖延怎么办？"`
-*   `"帮我用五色一天法规划一下明天。"`
-*   `"我该如何用 PNAS 方法来规划我的写书计划？"`
-*   `"我感觉压力好大，不知所措，该怎么办？"`
-*   `"我目标太多了，帮我聚焦。"`
-*   `"怎么养成好习惯？"`
-
-## 起源
-
-本技能建立在中国领先的时间管理教育机构"易效能"创始人 **叶武滨老师** 的研究成果之上。
-
-*   **国家发明专利**：该系统受国家发明专利保护。
-*   **《高能要事》**：阐述核心理念的著作。
-*   **《时间管理100讲》**：在喜马拉雅上播放量超过 1.5 亿的课程，连续两年位居教育榜第一。
-*   **15年**研究 | 遍布**10个国家**的**1000+场**线下工作坊 | 全球数百万践行者。
-
-## 文件结构
-
-```
-productivity-skill/
-├── skill.md                        # 主技能文件（双语 EN/CN）
-├── references/
-│   ├── core-theory.md              # 九段效能系统核心理论
-│   └── core-methodology.md         # ABC255、PNAS、水滴520 方法论
-├── README.md                       # 英文文档
-├── README_zh.md                    # 中文文档
-└── LICENSE                         # MIT 许可证
-```
+了解更多：[www.yixiaoneng.com](https://www.yixiaoneng.com) | 喜马拉雅搜索"时间管理100讲"
 
 ## 支持本技能
 
-如果这个技能帮助你提升了生产力，请考虑：
+如果这个技能对您有帮助，请考虑：
 
-*   在 GitHub 上给本仓库点 **Star**，以示支持
+*   在 [GitHub](https://github.com/yewubin-jpg/productivity-skill) 上给我们一个 **Star**
+*   在 [ClawHub](https://clawhub.ai) 上**点赞**和**评论**
 *   **分享**给需要时间管理的朋友
-*   在 ClawHub 上**留下评价**，帮助更多人发现它
 *   **Fork** 并贡献改进
-*   **关注** [@yewubin-jpg](https://github.com/yewubin-jpg) 获取更新
 
-> "每一个点赞、分享和评价，都帮助更多人走出生产力困境。你的支持对我们意义重大。"
-
-## 了解更多
-
-*   **官网**: [www.yixiaoneng.com](https://www.yixiaoneng.com)
-*   **喜马拉雅**: 搜索"时间管理100讲"（1.5亿+播放）
+> "每一个Star、分享和评论都能帮助更多人摆脱效率陷阱。您的支持对我们意义重大。"
 
 ## 贡献
 
-我们欢迎各种形式的贡献！请随时提交 Pull Request 或开启一个 Issue 来讨论你的想法。
+欢迎贡献！请随时提交Pull Request或开Issue讨论您的想法。
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 详情请见 [LICENSE](LICENSE) 文件。
+本项目采用 MIT 许可证 — 详见 [LICENSE](LICENSE) 文件。
 
 ---
 
-*v1.1 — 新增快速参考表、安装指南、文件结构说明和社区支持板块。*
+*v2.0 — 完整重写：从知识库升级为智能执行引擎，具备持久化记忆、自动提醒和日历/清单双轨系统。*

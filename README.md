@@ -1,4 +1,4 @@
-# Productivity Skill for OpenClaw (v1.1)
+# Productivity Skill v2.0 — Intelligent Execution Engine
 
 **[English](./README.md) | [中文](./README_zh.md)**
 
@@ -8,112 +8,127 @@
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![Version](https://img.shields.io/badge/version-1.1-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
-> **The AI productivity skill based on national invention patents for time management systems. Developed from Ye Wubin's "High-Energy Priorities" (《高能要事》) and "Time Management 100 Lectures" (《时间管理100讲》), which has over 150 million plays on Ximalaya.**
+> **Not just knowledge — an AI-powered execution system.** Based on Ye Wubin's (叶武滨) patented time management methodology with 150M+ plays on Ximalaya.
 
-This is an AI agent skill for platforms like OpenClaw, designed to help users master their time, energy, and focus. It's not just another to-do list app; it's a complete system for peak performance built on 15 years of research and practice with millions of users.
+This skill transforms your AI assistant into a **proactive productivity executive** that actively manages your tasks, goals, and schedule using the YiXiaoNeng (易效能) system. It assesses your energy, aligns tasks with your goals, and routes them through a dual Calendar/List execution system — all with persistent memory and automatic reminders.
 
-## Quick Reference
+## What's New in v2.0
 
-| Situation | Method | Action |
-|-----------|--------|--------|
-| Feeling overwhelmed | Energy Assessment (L1-L4) | Assess energy level first |
-| Procrastinating | ABC255 Method | Do A, Defer B, Record C |
-| Too many goals | Waterdrop 520 | Write 25 → Select 5 → Eliminate 20 |
-| Can't plan the day | Five-Color Day | Design day with 5 color blocks |
-| Big project stuck | PNAS Decomposition | Picture → Nouns → Actions → Sequence |
-| Need decision help | 3Q4D Framework | 3 Questions + 4D Actions |
-| Want life direction | Three-Circle Intersection | Joy + Strength + Meaning |
-| Building habits | 90-Day Sprint | Coach-led practice system |
-| Long-term growth | Nine-Level System | 9 mastery levels |
+Version 2.0 is a complete architectural rewrite, evolving from a passive knowledge base into an active, stateful execution engine.
 
-## Core Philosophy: Energy is Everything
+| Feature | v1.x (Knowledge) | v2.0 (Execution) |
+| :--- | :--- | :--- |
+| **Energy Assessment** | Mentioned in theory | AI actively assesses your L1-L4 state before every decision |
+| **Goal Management** | Described the Waterdrop 520 method | AI guides you through the full 520 process and stores goals in persistent memory |
+| **Task Classification** | Explained ABC categories | AI uses a decision matrix (Energy × Goals) to automatically classify every task |
+| **Calendar** | Described the Two-Week Calendar concept | AI writes events to a persistent calendar file and **sets automatic reminders** |
+| **Lists** | Described flexible lists | AI manages 5+ sub-lists (A/B/C/Waiting/Someday) with context tags and PNAS decomposition |
+| **Memory** | None | Full persistent memory system: user profile, goals, calendar, and task lists |
 
-Time isn't your problem. Energy is. This skill is built on a simple but powerful idea: **Do the most important things in your best energy state.**
+## How It Works
 
-We call this the **16x Productivity Principle**: 2 hours of deep, focused work during your peak energy window can lead to a 16x improvement in productivity.
-
-## What's Inside?
-
-This skill encapsulates the entire YiXiaoNeng (易效能) system, including:
-
-*   **The Nine-Level Performance System**: A step-by-step guide from single-task focus to life mastery.
-*   **ABC255 Work Method**: A ruthless prioritization and execution framework (Do A, Defer B, Record C).
-*   **PNAS Project Decomposition**: A method to break down any goal into actionable steps (Picture → Nouns → Actions → Sequence).
-*   **Waterdrop 520 Goal Method**: A system to focus on the 5 most critical goals and eliminate the rest.
-*   **3Q4D Decision Framework**: 3 Questions (Should I? What result? First step?) + 4D Actions (Delete, Delay, Delegate, Do).
-*   **Energy-First Approach**: Manage your physical, emotional, mental, and spiritual energy to sustain high performance.
-
-## Installation
-
-**Via ClawHub (recommended):**
-
-```bash
-clawhub install productivity-skill
-```
-
-**Via GitHub URL (paste in your agent):**
+The skill follows a strict workflow for every interaction:
 
 ```
-https://github.com/yewubin-jpg/productivity-skill
+INPUT → ENERGY ASSESSMENT → GOAL ALIGNMENT → PRIORITY CLASSIFICATION → DUAL-TRACK EXECUTION
 ```
 
-**Manual:**
+The **Priority Engine** uses a decision matrix that combines your energy level with goal alignment to classify every task:
 
-```bash
-git clone https://github.com/yewubin-jpg/productivity-skill.git ~/.openclaw/skills/productivity-skill
-```
+| | **High Goal Alignment** | **Low Goal Alignment** |
+| :--- | :--- | :--- |
+| **High Energy (L3/L4)** | **Class A: High-Energy Priority** → Calendar or A-List | **Class C: Distraction** → C-List or Delete |
+| **Low Energy (L1/L2)** | **Class B: Mismatched** → Defer until energy recovers | **Class D: Trivial** → Delete or Delegate |
 
-## How to Use
+The **Dual-Track Execution** then routes tasks to the appropriate system:
 
-Once installed, you can talk to your agent. Here are some examples:
+| Track | Purpose | Characteristics |
+| :--- | :--- | :--- |
+| **Calendar** | Hard-landscape events | Few, rigid, time-bound. With automatic reminders and long-term memory. |
+| **Lists** | Soft-landscape tasks | Many, flexible, actionable. Sorted into A/B/C/Waiting/Someday sub-lists. |
 
-*   `"I keep procrastinating on my main project."`
-*   `"Help me plan my day tomorrow using the Five-Color Day method."`
-*   `"How do I use the PNAS method to plan my book?"`
-*   `"I feel overwhelmed. What should I do?"`
-*   `"I have too many goals, help me focus."`
-*   `"How to build good habits?"`
+## Quick Start
 
-## The Origin
+After installation, simply say one of the following to your AI assistant:
 
-This skill is built on the work of **Ye Wubin (叶武滨)**, founder of YiXiaoNeng (易效能), China's leading productivity institution.
-
-*   **National Invention Patents**: The system is protected by national invention patents for time management.
-*   **《高能要事》 (High-Energy Priorities)**: The core book outlining the philosophy.
-*   **《时间管理100讲》 (Time Management 100 Lectures)**: A Ximalaya course with over 150 million plays, ranking #1 on the education chart for two consecutive years.
-*   **15 years** of research | **1000+ live workshops** across 10 countries | Millions of practitioners.
+| Trigger Phrase | What Happens |
+| :--- | :--- |
+| "Help me plan my day" | Daily Review: energy check → calendar overview → top A-tasks |
+| "I have a new task" | Full workflow: energy → goals → priority → execution |
+| "Plan my week" | Weekly Review: 14-day calendar view + all list reviews |
+| "I feel exhausted" | AI detects L1 energy, recommends rest, defers important tasks |
+| "Set up my goals" | Waterdrop 520 goal-setting protocol |
+| "I have a meeting Tuesday at 3 PM" | Calendar Track: stores event + sets automatic reminder |
 
 ## File Structure
 
 ```
 productivity-skill/
-├── skill.md                        # Main skill file (bilingual EN/CN)
+├── skill.md                         # Core execution logic (the brain)
 ├── references/
-│   ├── core-theory.md              # Nine-Level Performance System theory
-│   └── core-methodology.md         # ABC255, PNAS, Waterdrop 520 methods
-├── README.md                       # English documentation
-├── README_zh.md                    # Chinese documentation
-└── LICENSE                         # MIT License
+│   ├── energy_engine.md             # Energy assessment rules (L1-L4)
+│   ├── goal_engine.md               # Goal management (Waterdrop 520 + Eight Areas)
+│   ├── priority_engine.md           # High-Energy Priority decision matrix
+│   ├── calendar_rules.md            # Calendar system rules (Hard Landscape)
+│   ├── list_rules.md                # List system rules (Soft Landscape)
+│   ├── core-theory.md               # Nine-Level Performance System theory
+│   └── core-methodology.md          # ABC255, PNAS, and more
+├── memory/                          # (Created at runtime by the AI)
+│   ├── profile.md                   # User energy patterns and preferences
+│   ├── goals.md                     # Annual goals (Waterdrop 520) + Eight Life Areas
+│   ├── calendar.md                  # Time-bound events with reminders
+│   └── lists/
+│       ├── a_tasks.md               # High-Energy Priority tasks
+│       ├── b_tasks.md               # Deferred important tasks
+│       ├── c_tasks.md               # Low-priority tasks
+│       ├── someday.md               # Someday/Maybe ideas
+│       └── waiting.md               # Delegated tasks
+├── README.md
+├── README_zh.md
+└── LICENSE
 ```
+
+## Installation
+
+**Via ClawHub CLI (Recommended):**
+
+```shell
+npx clawhub@latest install productivity-skill
+```
+
+**Via GitHub URL (Paste into your AI assistant's chat):**
+
+```
+https://github.com/yewubin-jpg/productivity-skill
+```
+
+**Manual Installation:**
+
+```shell
+git clone https://github.com/yewubin-jpg/productivity-skill.git
+cp -r productivity-skill ~/.openclaw/skills/
+```
+
+## The Origin
+
+This skill is built on the work of **Ye Wubin (叶武滨)**, founder of YiXiaoNeng (易效能), China's leading productivity institution.
+
+The methodology is protected by **Chinese national invention patents** and is based on 15 years of research, 1000+ live workshops across 10 countries, and millions of practitioners. The core book "High-Energy Priorities" (《高能要事》) and the Ximalaya course "Time Management 100 Lectures" (《时间管理100讲》) with 150M+ plays form the theoretical foundation.
+
+Learn more: [www.yixiaoneng.com](https://www.yixiaoneng.com) | Ximalaya: Search "时间管理100讲"
 
 ## Support This Skill
 
-If this skill helped you become more productive, please consider:
+If this skill has helped you, please consider:
 
-*   **Star** this repository to show your support
+*   **Star** this repository on [GitHub](https://github.com/yewubin-jpg/productivity-skill) to show your support
+*   **Like** and **Comment** on [ClawHub](https://clawhub.ai) to help others discover it
 *   **Share** it with friends who need better time management
-*   **Leave a review** on ClawHub to help others discover it
 *   **Fork** and contribute improvements
-*   **Follow** [@yewubin-jpg](https://github.com/yewubin-jpg) for updates
 
 > "Every star, share, and review helps more people escape the productivity trap. Your support means the world to us."
-
-## Learn More
-
-*   **Official Website**: [www.yixiaoneng.com](https://www.yixiaoneng.com)
-*   **Ximalaya**: Search "时间管理100讲" (150M+ plays)
 
 ## Contributing
 
@@ -121,8 +136,8 @@ We welcome contributions! Please feel free to submit a pull request or open an i
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-*v1.1 — Updated with Quick Reference, installation guide, file structure, and community support section.*
+*v2.0 — Complete rewrite: from knowledge base to intelligent execution engine with persistent memory, automatic reminders, and dual Calendar/List system.*
