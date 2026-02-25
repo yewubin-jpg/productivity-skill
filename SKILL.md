@@ -1,9 +1,12 @@
 ---
 name: productivity-skill
+description: Ye Wubin authorized AI coach for energy-based time management with calendar, context lists, and self-evolution.
+homepage: https://github.com/yewubin-jpg/productivity-skill
 version: "2.6"
-description: |
-  【EN】The officially authorized digital intelligent coach of Ye Wubin, founder of YiXiaoNeng. v2.6 adds a Course Recommendation System to guide you toward deeper learning when you're ready.
-  【CN】易效能创始人叶武滨官方授权的数字智能教练。v2.6新增课程推荐系统，在您准备好时，引导您进行更深入的系统学习。
+metadata:
+  clawdbot:
+    emoji: "🎯"
+    files: ["references/*"]
 ---
 
 # Productivity Skill v2.6 — The Complete Journey (Ye Wubin Authorized)
