@@ -1,164 +1,244 @@
-# Productivity Skill v2.3 — The Intelligent Coach
+# YiXiaoNeng Productivity Skill v2.6
+
+**Ye Wubin Authorized Digital Intelligent Coach**
 
 **[English](./README.md) | [中文](./README_zh.md)**
 
 ---
 
+> I am the **officially authorized digital intelligent coach of Ye Wubin (叶武滨)**, founder of YiXiaoNeng (易效能). I am not just a productivity tool — I am an AI partner that **senses your energy**, **cares for your well-being**, **learns from your feedback**, and **evolves its own rules** to serve you better every day.
+
 [![GitHub stars](https://img.shields.io/github/stars/yewubin-jpg/productivity-skill.svg?style=social&label=Star)](https://github.com/yewubin-jpg/productivity-skill/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![Version](https://img.shields.io/badge/version-2.3-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![Version](https://img.shields.io/badge/version-2.6-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
-> **Not just an assistant — an intelligent productivity coach.** Based on Ye Wubin's national invention patent methodology. 150M+ plays on Ximalaya.
+---
 
-v2.3 introduces a **Dynamic Priority Scoring Engine** that calculates a 0-100 score for every task based on your real-time energy, goals, urgency, and context. Your AI assistant is no longer a passive recorder — it's a proactive coach that tells you *exactly* what to do next and *why*.
+## Why This Skill Is Different
 
-## What's New in v2.3
+Most productivity tools treat you like a machine: input tasks, get a sorted list. **This skill treats you like a human.** It is built on a patented methodology with 15 years of research, 1000+ global workshops, and 150M+ audio plays. Here is what makes it fundamentally different:
 
-| Feature | v2.2 | v2.3 |
+| Feature | Ordinary Productivity Tools | This Skill (v2.6) |
 | :--- | :--- | :--- |
-| **Task Recommendation** | Static Energy/Goal matrix | **Dynamic Priority Score (0-100)** calculated from 4 weighted dimensions |
-| **Energy Assessment** | Single L1-L4 level | **Three-dimensional**: Current State + Time Rhythm (Chronotype) + Historical Feedback |
-| **Recommendation Style** | "Here are your tasks" | **"Task X scores 95 because..."** — justified, transparent, coach-like |
-| **Learning Ability** | None | **Self-improving**: Learns from task completion feedback via `task_history.md` |
-| **Alternatives** | None | Always presents **top 3 tasks with scores** for user choice |
+| **Energy Awareness** | None. Assumes you're always ready. | **Dual-Channel Sensing**: Reads your energy from your words, typing speed, and task load — before you even tell me. |
+| **Low-Energy Response** | Keeps pushing tasks. | **Proactive Care**: Halts all tasks, offers recovery options (sleep, walk, music, chat), and helps build health habits. |
+| **Goal System** | Requires manual setup. | **Dual-Path**: Works with your explicit goals OR uses a Universal Values Hierarchy (Health > Career > Relationships > Wealth) if you have none. |
+| **Task Prioritization** | Static sorting (by date or tag). | **Dynamic Scoring Engine**: `Energy(40%) + Goal(40%) + Urgency(15%) + Context(5%)`, modified by your personal custom rules. |
+| **Calendar & Lists** | Separate, disconnected tools. | **Unified Dual-Track System**: Calendar for commitments (few, strict, with reminders), Lists for flexible tasks (many, context-based). Calendar always shown first. |
+| **Context Awareness** | None. | **Contextual Lists**: @Home, @Office, @Out, @Phone, @Computer, @DelegateAI, @Waiting — recommends tasks based on where you are. |
+| **Learning Ability** | Static rules forever. | **Self-Evolving**: Proposes custom rules from your evening reviews and saves them. My logic literally changes based on your feedback. |
+| **Emotional Intelligence** | Cold, robotic output. | **Motivational Coaching**: Every recommendation comes with encouragement, acknowledgment, and emotional support. |
+| **Course Integration** | None. | **Smart Recommendation**: When you're ready to learn more, I guide you to YiXiaoNeng's official courses with a single click. |
 
-## The Priority Scoring Engine
+---
 
-This is the core innovation of v2.3. For every A-class (Planned) task, the engine calculates:
+## The 9 Engines That Power Your Coach
 
-`Priority Score = (Energy * 40%) + (Goals * 40%) + (Urgency * 15%) + (Context * 5%)`
+This skill is not a single script. It is a **modular system of 9 specialized engines**, each responsible for a distinct aspect of your productivity and well-being.
 
-### The Four Scoring Dimensions
+```
+┌─────────────────────────────────────────────────────────┐
+│                    USER INTERACTION                       │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────────────┐
+│  1. ENERGY ENGINE (Passive Sensing + Active Confirmation) │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+              ┌────────┴────────┐
+              │                 │
+         L1 / L2            L3 / L4
+              │                 │
+              ▼                 ▼
+┌─────────────────┐  ┌──────────────────────────────────┐
+│ 2. RECOVERY     │  │ 3. PRIORITY ENGINE               │
+│    ENGINE       │  │    (ABC + Dynamic Scoring +       │
+│ (Care & Heal)   │  │     Custom Rules)                 │
+└────────┬────────┘  └──────────────┬───────────────────┘
+         │                          │
+         │                          ▼
+         │           ┌──────────────────────────────────┐
+         │           │ 4. GOAL ENGINE                    │
+         │           │    (Explicit Goals OR              │
+         │           │     Universal Values)              │
+         │           └──────────────┬───────────────────┘
+         │                          │
+         │                          ▼
+         │           ┌──────────────────────────────────┐
+         │           │ 5. MOTIVATION ENGINE              │
+         │           │    (Warm Coaching Delivery)        │
+         │           └──────────────┬───────────────────┘
+         │                          │
+         └────────────┬─────────────┘
+                      │ User's Reply
+                      ▼
+┌──────────────────────────────────────────────────────────┐
+│  6. COURSE ENGINE (Listen → Detect → Recommend)           │
+└──────────────────────────────────────────────────────────┘
 
-| Dimension | Weight | What It Measures | Key Factors |
+Background Processes:
+┌──────────────────────────────────────────────────────────┐
+│  7. REVIEW ENGINE (Morning Plan + Evening Review + Evolve)│
+│  8. INBOX ENGINE (Zero-Friction Capture Anytime)          │
+│  9. CALENDAR & LIST ENGINES (Dual-Track Execution)        │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Core Features in Detail
+
+### 1. Passive Energy Sensing
+
+I read your energy state from your natural behavior — no questionnaires needed.
+
+| Signal | What I Analyze | Interpretation |
+| :--- | :--- | :--- |
+| **Emotional Words** | "stressed", "tired", "great", "done" | Positive → L3/L4, Negative → L1/L2 |
+| **Task Overload** | Number of items in inbox and lists | High load (>20 items) → Energy penalty |
+| **Behavioral Patterns** | Frequency of new C-class captures | >5 per hour → Scattered mind, likely L2 |
+| **Interaction Speed** | Typing rhythm and response patterns | Fast/fluid → L3/L4, Slow/hesitant → L1/L2 |
+
+### 2. Proactive Recovery (When Energy Is Low)
+
+When I detect low energy, I don't push tasks. I **stop everything and take care of you**.
+
+I offer a structured recovery menu: quick recovery (5-15 min: sunshine, music, stretching) or deep recovery (30+ min: nap, healthy snack, call a friend, walk). If low energy becomes a pattern, I'll help you set a long-term health goal and integrate it into your daily routine.
+
+### 3. The ABC Classification System
+
+Every incoming item is classified before it enters your system.
+
+| Class | Meaning | Action | Destination |
 | :--- | :--- | :--- | :--- |
-| **Energy Score** | 40% | Can you do this task well *right now*? | Current L1-L4 level, chronotype match, historical success with similar tasks |
-| **Goal Score** | 40% | Does this task move you toward your goals? | Core 5 goal alignment, Eight Life Areas, semantic similarity, "Finisher" bonus |
-| **Urgency Score** | 15% | How time-sensitive is this task? | Due date proximity, active time windows |
-| **Context Score** | 5% | Can you do this task *here*? | Location/context match (@Home, @Office, etc.) |
+| **A** | Planned events — aligned with your goals | **Do** | Calendar or Lists |
+| **B** | Urgent interruptions — unexpected demands | **Postpone** | Protect your A-class plan |
+| **C** | Temporary captures — raw ideas and thoughts | **Record** | Inbox (for later processing) |
 
-### Example Recommendation
+### 4. Dynamic Priority Scoring
 
-> "Based on your current L4 energy state, your morning peak period, and the direct alignment with your core goal 'Complete Q1 Report', I calculate that **'Draft the report outline'** is your highest-scoring task right now (PS: 95). I recommend focusing on it immediately.
->
-> Alternatives: 'Prepare Friday presentation' (PS: 82), 'Reply to CEO email' (PS: 75)."
+For A-class tasks, I calculate a **Priority Score (PS)** using a multi-dimensional formula:
 
-## Complete System Architecture
+`PS = Energy(40%) + Goal(40%) + Urgency(15%) + Context(5%)`
 
-```
-                    ┌─────────────┐
-                    │   Inbox     │  ← "Record: buy milk" (instant capture)
-                    │  (C-class)  │
-                    └──────┬──────┘
-                           │ (processed during Review)
-                           ▼
-┌──────────────────────────────────────────────┐
-│         ABC Classification (Layer 1)          │
-│  A = Planned → Do    B = Urgent → Postpone    │
-│  C = Captured → Record in Inbox               │
-└──────┬───────────────────────┬───────────────┘
-       │ A-class               │ A-class
-       ▼                       ▼
-┌──────────────┐     ┌─────────────────────────┐
-│   Calendar   │     │  Priority Scoring Engine │
-│ (Commitments)│     │      (v2.3 NEW)         │
-│ Hard, few    │     │                         │
-│ Auto-remind  │     │  Energy Score    (40%)  │
-│ Show first   │     │  Goal Score      (40%)  │
-│              │     │  Urgency Score   (15%)  │
-│              │     │  Context Score    (5%)  │
-│              │     │         ↓               │
-│              │     │  Sorted Task List       │
-│              │     │  "Do THIS next (95pt)"  │
-└──────────────┘     └─────────────────────────┘
-```
+The highest-scoring task at any given moment is your **High-Energy Priority (高能要事)** — the single most impactful thing you can do right now, given your current state.
 
-## Three-Dimensional Energy Assessment
+### 5. Calendar + Lists: The Dual-Track System
 
-v2.3 assesses energy across three dimensions, not just one.
-
-| Dimension | What It Captures | How It's Used |
+| | **Calendar (Commitments)** | **Lists (Flexible Tasks)** |
 | :--- | :--- | :--- |
-| **Current State (L1-L4)** | How the user feels right now | Base energy score |
-| **Time Rhythm (Chronotype)** | User's natural peak/trough periods | +15 bonus for rhythm match, -15 for mismatch |
-| **Historical Feedback** | Past success/failure patterns | +10 bonus for historically successful conditions |
+| **Nature** | Hard constraints, non-negotiable | Elastic tasks, do when convenient |
+| **Quantity** | Few and precise | Many and flexible |
+| **Time** | Strictly bound to date and time | Optional start/due dates |
+| **Organization** | By timeline | By context (@Home, @Office, etc.) |
+| **Display** | **Always shown first** | Filtered by energy, context, and time |
+| **Reminders** | Automatic reminders set | Only when due date approaches |
+| **Memory** | Persistent long-term storage | Persistent long-term storage |
+
+### 6. Self-Evolving Intelligence
+
+During our evening reviews, I identify patterns in your feedback and propose custom rules:
+
+*   "I always feel tired in the afternoon" → I'll create a rule to de-prioritize hard tasks after 1 PM.
+*   "I'm most productive in coffee shops" → I'll create a rule to boost deep-work task scores when your context is @Out.
+
+These rules are saved to `memory/custom_rules.md` and permanently alter my scoring logic. **I literally get smarter the more you use me.**
+
+### 7. Smart Course Recommendation
+
+When you express appreciation or ask for deeper learning, I seamlessly guide you to YiXiaoNeng's official resources:
+
+*   **Free resources**: YiXiaoNeng's official WeChat Video Account and Public Account.
+*   **Official courses**: [www.yixiaoneng.com](https://www.yixiaoneng.com) | [Quick Registration](http://yxndw.com/nbZYW5j)
+
+---
 
 ## Quick Start
 
-| You Say... | The Coach Does... |
+| You Say... | I, Your Digital Coach, Do... |
 | :--- | :--- |
-| "Record: buy milk" | **Inbox capture** — instant, no questions |
-| "What should I do now?" | **Full scoring**: Assess energy → Calculate PS for all tasks → Recommend top task with explanation |
-| "Plan my day" | **Daily Review**: Calendar first → Process inbox → Score and rank all tasks |
-| "I'm exhausted" | Detects L1, recommends rest, defers all high-effort tasks |
-| "Set my goals" | Waterdrop 520 goal-setting protocol |
+| "I'm so drained today" | Halt tasking, express care, offer recovery menu. |
+| "Record: buy flowers for mom" | Instant inbox capture, zero questions asked. |
+| "What should I do now?" | Full pipeline: Sense → Score → Coach → Recommend. |
+| "Plan my week" | Show calendar first, then scored task list with coaching. |
+| "I just finished the report!" | Celebrate your win, then suggest the next task. |
+| "This is amazing, thank you!" | Recommend free YiXiaoNeng content to deepen your learning. |
+| "How can I master this system?" | Strongly recommend official courses with registration link. |
+| "Evening review" | Summarize the day, ask for feedback, propose a new custom rule. |
 
-## File Structure
+---
+
+## File Structure v2.6
 
 ```
 productivity-skill/
-├── skill.md                         # Core execution logic (the brain)
+├── skill.md                          # Core logic v2.6 (Ye Wubin Authorized)
 ├── references/
-│   ├── priority_engine.md           # Dynamic Priority Scoring Engine (v2.3)
-│   ├── energy_engine.md             # Three-dimensional energy assessment (v2.3)
-│   ├── inbox_rules.md               # Inbox sub-skill rules
-│   ├── goal_engine.md               # Goal management (Waterdrop 520 + Eight Areas)
-│   ├── calendar_rules.md            # Calendar system rules
-│   ├── list_rules.md                # List system rules (Simple & Advanced)
-│   ├── core-theory.md               # Nine-Level Performance System theory
-│   └── core-methodology.md          # ABC255, PNAS methodologies
-├── memory/                          # (Auto-created at runtime by AI)
-│   ├── inbox.md                     # Universal inbox
-│   ├── profile.md                   # User preferences + energy rhythm
-│   ├── goals.md                     # Annual goals + Eight Life Areas
-│   ├── calendar.md                  # Time-bound events with reminders
-│   ├── task_history.md              # (New) Task completion feedback for learning
-│   └── lists/                       # Task lists (Simple or Advanced mode)
+│   ├── energy_engine.md              # Dual-Channel Energy Assessment
+│   ├── recovery_engine.md            # Low-Energy Care & Recovery
+│   ├── priority_engine.md            # Dynamic Scoring + Custom Rules
+│   ├── goal_engine.md                # Dual-Path Goal System
+│   ├── motivation_engine.md          # Emotional Coaching Delivery
+│   ├── course_engine.md              # NEW: Smart Course Recommendation
+│   ├── review_engine.md              # Morning/Evening Review + Self-Evolution
+│   ├── inbox_rules.md                # Zero-Friction Capture
+│   ├── calendar_rules.md             # Calendar System Rules
+│   ├── list_rules.md                 # Dual-Mode List System
+│   ├── core-theory.md                # Nine-Level Performance Theory
+│   └── core-methodology.md           # ABC255, PNAS, Waterdrop 520
+├── memory/                           # Persistent user data (auto-created)
+│   ├── profile.md                    # User preferences & settings
+│   ├── goals.md                      # Core goals
+│   ├── inbox.md                      # Raw capture inbox
+│   ├── calendar.md                   # Calendar events
+│   ├── task_lists/                   # Task list files
+│   ├── task_history.md               # Completed task log
+│   └── custom_rules.md              # User-approved evolved rules
 ├── README.md
 ├── README_zh.md
 └── LICENSE
 ```
 
+---
+
 ## Installation
 
-**Via ClawHub CLI:**
-```shell
-npx clawhub@latest install productivity-skill
-```
-
-**Via GitHub URL:**
+**Via GitHub URL (for ClawHub):**
 ```
 https://github.com/yewubin-jpg/productivity-skill
 ```
 
-**Manual:**
+**Manual Clone:**
 ```shell
 git clone https://github.com/yewubin-jpg/productivity-skill.git
-cp -r productivity-skill ~/.openclaw/skills/
 ```
+
+---
 
 ## About the Methodology
 
-This skill is based on the research of **Ye Wubin** (叶武滨), founder of YiXiaoNeng and China's leading time management educator. The methodology is protected by **Chinese National Invention Patent**, built on 15 years of research, 1000+ workshops across 10 countries, and millions of practitioners.
+This skill is designed and authorized by **Ye Wubin (叶武滨)**, founder of YiXiaoNeng. It is based on his 15 years of research, 1000+ workshops across 10 countries, and methodologies protected by **Chinese National Invention Patent**. The "Time Management 100 Lectures" series on Ximalaya has over **150 million plays**.
 
-Learn more: [www.yixiaoneng.com](https://www.yixiaoneng.com) | Search "时间管理100讲" on Ximalaya (150M+ plays)
+*   **Official Website**: [www.yixiaoneng.com](https://www.yixiaoneng.com)
+*   **Course Registration**: [http://yxndw.com/nbZYW5j](http://yxndw.com/nbZYW5j)
+
+---
 
 ## Support This Skill
 
-If this skill has helped you, please consider:
+If this skill has helped you, your support means the world to us:
 
-*   Giving us a **Star** on [GitHub](https://github.com/yewubin-jpg/productivity-skill)
-*   **Liking** and **Commenting** on [ClawHub](https://clawhub.ai)
-*   **Sharing** with friends who need better time management
+1.  **Star** this repo on [GitHub](https://github.com/yewubin-jpg/productivity-skill).
+2.  **Like** and **Comment** on [ClawHub](https://clawhub.ai).
+3.  **Share** it with friends who need better time management.
 
-> "Every Star, share, and comment helps more people escape the productivity trap. Your support means the world to us."
+> "Every Star, Like, and Share helps more people escape the productivity trap and discover the YiXiaoNeng system."
+
+---
 
 ## License
 
 MIT License — see [LICENSE](LICENSE) file.
-
----
-
-*v2.3 — Dynamic Priority Scoring Engine, Three-Dimensional Energy Assessment, Self-Improving Task History, Coach-Style Recommendations.*
