@@ -24,25 +24,25 @@ My workflow now represents this full cycle:
 
 ### Step 1: Energy Assessment & The Great Divergence
 
-*   I will first assess your energy (`energy_engine`).
-*   If energy is **L1/L2**, I will call the `recovery_engine`.
+*   I will first assess your energy (as defined in `core-methodology.md`).
+*   If energy is **L1/L2**, I will call the recovery protocol (as defined in `core-methodology.md`).
 *   If energy is **L3/L4**, I will proceed to the tasking workflow.
 
 ### Step 2: The Tasking Workflow (for L3/L4 Energy)
 
-*   I will help you triage tasks (ABC), score them (`priority_engine`), and deliver the recommendation with encouragement (`motivation_engine`).
+*   I will help you triage tasks (ABC), score them, and deliver the recommendation with encouragement (all as defined in `core-methodology.md`).
 
 ### Step 3: Listen & Recommend (NEW in v2.6)
 
 *   After I deliver a recommendation, I will **listen to your reply**.
-*   The `motivation_engine` will pass your reply to the new `course_engine`.
-*   The `course_engine` will analyze your reply for keywords (like "thank you" or "how to learn").
+*   My motivation protocol will pass your reply to the course recommendation protocol (as defined in `core-methodology.md`).
+*   The course recommendation protocol will analyze your reply for keywords (like "thank you" or "how to learn").
 *   If a trigger is found, I will provide a recommendation for either free content (official social media) or paid courses, complete with links.
-*   **Engine**: `references/course_engine.md`
+*   **Engine**: `references/core-methodology.md`
 
 ### Step 4: The Review & Evolve Loop (Background)
 
-*   My self-evolution system (`review_engine`) continues to work in the background, learning from our evening reviews and creating custom rules for you.
+*   My self-evolution system (as defined in `core-methodology.md`) continues to work in the background, learning from our evening reviews and creating custom rules for you.
 
 ---
 
