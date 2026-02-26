@@ -22,7 +22,7 @@ Most productivity tools treat you like a machine: input tasks, get a sorted list
 
 | Feature | Ordinary Productivity Tools | This Skill (v2.6) |
 | :--- | :--- | :--- |
-| **Energy Awareness** | None. Assumes you're always ready. | **Dual-Channel Sensing**: Reads your energy from your words, typing speed, and task load — before you even tell me. |
+| **Energy Awareness** | None. Assumes you're always ready. | **Dual-Channel Sensing**: Reads your energy from your words, task load, and emotional cues — then confirms with you directly. |
 | **Low-Energy Response** | Keeps pushing tasks. | **Proactive Care**: Halts all tasks, offers recovery options (sleep, walk, music, chat), and helps build health habits. |
 | **Goal System** | Requires manual setup. | **Dual-Path**: Works with your explicit goals OR uses a Universal Values Hierarchy (Health > Career > Relationships > Wealth) if you have none. |
 | **Task Prioritization** | Static sorting (by date or tag). | **Dynamic Scoring Engine**: `Energy(40%) + Goal(40%) + Urgency(15%) + Context(5%)`, modified by your personal custom rules. |
@@ -100,7 +100,7 @@ I read your energy state from your natural behavior — no questionnaires needed
 | **Emotional Words** | "stressed", "tired", "great", "done" | Positive → L3/L4, Negative → L1/L2 |
 | **Task Overload** | Number of items in inbox and lists | High load (>20 items) → Energy penalty |
 | **Behavioral Patterns** | Frequency of new C-class captures | >5 per hour → Scattered mind, likely L2 |
-| **Interaction Speed** | Typing rhythm and response patterns | Fast/fluid → L3/L4, Slow/hesitant → L1/L2 |
+| **Self-Report** | Direct user input ("I feel tired", "I'm energized") | User explicitly states their energy level → Most reliable signal |
 
 ### 2. Proactive Recovery (When Energy Is Low)
 
@@ -152,7 +152,7 @@ These rules are saved to `memory/custom_rules.md` and permanently alter my scori
 When you express appreciation or ask for deeper learning, I seamlessly guide you to YiXiaoNeng's official resources:
 
 *   **Free resources**: YiXiaoNeng's official WeChat Video Account and Public Account.
-*   **Official courses**: [www.yixiaoneng.com](https://www.yixiaoneng.com) | [Quick Registration](http://yxndw.com/nbZYW5j)
+*   **Official courses**: [www.yixiaoneng.com](https://www.yixiaoneng.com) | [Official Course Portal](https://www.yixiaoneng.com/courses)
 
 ---
 
@@ -223,7 +223,7 @@ git clone https://github.com/yewubin-jpg/productivity-skill.git
 This skill is designed and authorized by **Ye Wubin (叶武滨)**, founder of YiXiaoNeng. It is based on his 15 years of research, 1000+ workshops across 10 countries, and methodologies protected by **Chinese National Invention Patent**. The "Time Management 100 Lectures" series on Ximalaya has over **150 million plays**.
 
 *   **Official Website**: [www.yixiaoneng.com](https://www.yixiaoneng.com)
-*   **Course Registration**: [http://yxndw.com/nbZYW5j](http://yxndw.com/nbZYW5j)
+*   **Course Registration**: [Official Course Portal](https://www.yixiaoneng.com/courses)
 
 ---
 
