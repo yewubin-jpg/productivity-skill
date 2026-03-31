@@ -1,4 +1,4 @@
-# 易效能生产力技能 v2.6
+# 易效能生产力技能 v2.9
 
 **叶武滨官方授权数字智能教练**
 
@@ -12,7 +12,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT 许可证](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![版本](https://img.shields.io/badge/version-2.6-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![版本](https://img.shields.io/badge/version-2.9-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
 ---
 
@@ -20,7 +20,7 @@
 
 大多数生产力工具把你当机器：输入任务，输出排序列表。**这个技能把你当人。** 它建立在一套拥有15年研究、全球1000+场工作坊、喜马拉雅1.5亿+播放量的国家发明专利方法论之上。以下是它的根本性差异：
 
-| 功能 | 普通生产力工具 | 本技能 (v2.6) |
+| 功能 | 普通生产力工具 | 本技能 (v2.9) |
 | :--- | :--- | :--- |
 | **能量感知** | 无。假设你随时准备好。 | **双通道感知**：从你的用词、任务堆积量、情绪线索中读取能量——并主动与你确认。 |
 | **低能量响应** | 继续推任务。 | **主动关怀**：停止一切任务，提供恢复菜单（睡眠、散步、音乐、聊天），帮你建立健康习惯。 |
@@ -143,7 +143,7 @@
 *   "我下午总是很困" → 我会创建一个规则，在下午1点后自动降低高难度任务的优先级。
 *   "我在咖啡馆效率最高" → 我会创建一个规则，当你的情景是@外出时，自动提升深度工作任务的分数。
 
-这些规则被保存到 `memory/custom_rules.md` 中，并永久改变我的评分逻辑。**你用得越多，我就越聪明。**
+这些规则被保存到系统长期记忆 `MEMORY.md` 的自定义规则区中，并永久改变我的评分逻辑。**你用得越多，我就越聪明。**
 
 ### 7. 智能课程推荐
 
@@ -169,36 +169,23 @@
 
 ---
 
-## 文件结构 v2.6
+## 文件结构 v2.9
 
 ```
 productivity-skill/
-├── skill.md                          # 核心逻辑 v2.6（叶武滨授权）
+├── SKILL.md                          # 核心逻辑 v2.9（叶武滨授权）
 ├── references/
-│   ├── energy_engine.md              # 双通道能量评估引擎
-│   ├── recovery_engine.md            # 低能量关怀与恢复引擎
-│   ├── priority_engine.md            # 动态评分 + 自定义规则引擎
-│   ├── goal_engine.md                # 双路径目标管理引擎
-│   ├── motivation_engine.md          # 教练式激励引擎
-│   ├── course_engine.md              # 智能课程推荐引擎
-│   ├── review_engine.md              # 早晚复盘 + 自我进化引擎
-│   ├── inbox_rules.md                # 零摩擦收件箱引擎
-│   ├── calendar_rules.md             # 日历系统规则
-│   ├── list_rules.md                 # 双模式清单系统
-│   ├── core-theory.md                # 九段效能系统理论
-│   └── core-methodology.md           # ABC255、PNAS、水滴520方法论
-├── memory/                           # 持久化用户数据（自动创建）
-│   ├── profile.md                    # 用户偏好与设置
-│   ├── goals.md                      # 核心目标
-│   ├── inbox.md                      # 原始收件箱
-│   ├── calendar.md                   # 日历事件
-│   ├── task_lists/                   # 任务清单文件
-│   ├── task_history.md               # 已完成任务日志
-│   └── custom_rules.md              # 用户批准的进化规则
+│   ├── core-methodology.md           # 全部引擎规则（日历、能量、目标、
+│   │                                 #   收件箱、清单、激励、优先级、
+│   │                                 #   恢复、复盘、课程推荐）
+│   └── core-theory.md                # 九段效能系统理论
+├── PRIVACY.md                        # 完整隐私政策
 ├── README.md
 ├── README_zh.md
 └── LICENSE
 ```
+
+**说明**：本技能**不会**创建自己的 `memory/` 文件夹。所有用户数据（目标、偏好、任务、自定义规则）均通过**系统原生的记忆机制**存储（MEMORY.md 用于长期记忆，每日笔记用于短期上下文），确保在所有 OpenClaw 环境中兼容运行。
 
 ---
 

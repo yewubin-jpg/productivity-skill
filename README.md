@@ -1,4 +1,4 @@
-# YiXiaoNeng Productivity Skill v2.6
+# YiXiaoNeng Productivity Skill v2.9
 
 **Ye Wubin Authorized Digital Intelligent Coach**
 
@@ -12,7 +12,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/yewubin-jpg/productivity-skill.svg?style=social&label=Fork)](https://github.com/yewubin-jpg/productivity-skill/network/members)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yewubin-jpg/productivity-skill/blob/main/LICENSE)
 [![ClawHub](https://img.shields.io/badge/ClawHub-productivity--skill-orange.svg)](https://clawhub.ai/)
-[![Version](https://img.shields.io/badge/version-2.6-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
+[![Version](https://img.shields.io/badge/version-2.9-blue.svg)](https://github.com/yewubin-jpg/productivity-skill/releases)
 
 ---
 
@@ -145,7 +145,7 @@ During our evening reviews, I identify patterns in your feedback and propose cus
 *   "I always feel tired in the afternoon" → I'll create a rule to de-prioritize hard tasks after 1 PM.
 *   "I'm most productive in coffee shops" → I'll create a rule to boost deep-work task scores when your context is @Out.
 
-These rules are saved to `memory/custom_rules.md` and permanently alter my scoring logic. **I literally get smarter the more you use me.**
+These rules are saved to the custom rules section in `MEMORY.md` (the system's long-term memory) and permanently alter my scoring logic. **I literally get smarter the more you use me.**
 
 ### 7. Smart Course Recommendation
 
@@ -171,36 +171,23 @@ When you express appreciation or ask for deeper learning, I seamlessly guide you
 
 ---
 
-## File Structure v2.6
+## File Structure v2.9
 
 ```
 productivity-skill/
-├── skill.md                          # Core logic v2.6 (Ye Wubin Authorized)
+├── SKILL.md                          # Core logic v2.9 (Ye Wubin Authorized)
 ├── references/
-│   ├── energy_engine.md              # Dual-Channel Energy Assessment
-│   ├── recovery_engine.md            # Low-Energy Care & Recovery
-│   ├── priority_engine.md            # Dynamic Scoring + Custom Rules
-│   ├── goal_engine.md                # Dual-Path Goal System
-│   ├── motivation_engine.md          # Emotional Coaching Delivery
-│   ├── course_engine.md              # NEW: Smart Course Recommendation
-│   ├── review_engine.md              # Morning/Evening Review + Self-Evolution
-│   ├── inbox_rules.md                # Zero-Friction Capture
-│   ├── calendar_rules.md             # Calendar System Rules
-│   ├── list_rules.md                 # Dual-Mode List System
-│   ├── core-theory.md                # Nine-Level Performance Theory
-│   └── core-methodology.md           # ABC255, PNAS, Waterdrop 520
-├── memory/                           # Persistent user data (auto-created)
-│   ├── profile.md                    # User preferences & settings
-│   ├── goals.md                      # Core goals
-│   ├── inbox.md                      # Raw capture inbox
-│   ├── calendar.md                   # Calendar events
-│   ├── task_lists/                   # Task list files
-│   ├── task_history.md               # Completed task log
-│   └── custom_rules.md              # User-approved evolved rules
+│   ├── core-methodology.md           # All engine rules (Calendar, Energy, Goals,
+│   │                                 #   Inbox, Lists, Motivation, Priority,
+│   │                                 #   Recovery, Review, Course Recommendation)
+│   └── core-theory.md                # Nine-Level Performance Theory
+├── PRIVACY.md                        # Complete privacy policy
 ├── README.md
 ├── README_zh.md
 └── LICENSE
 ```
+
+**Note**: This skill does **not** create its own `memory/` folder. All user data (goals, preferences, tasks, custom rules) is stored through the **system's native memory mechanism** (MEMORY.md for long-term, daily notes for short-term), ensuring compatibility across all OpenClaw environments.
 
 ---
 
