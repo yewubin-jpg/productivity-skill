@@ -24,7 +24,7 @@ Tasks without a specific time belong in the **List System**.
 
 2.  **Confirm the Details**: Re-confirm all details: **Title, Date, and Time**.
 
-3.  **Write to Internal Memory**: Append the event to `/home/ubuntu/productivity-skill/memory/calendar.md`. This file is the skill's internal, permanent long-term memory.
+3.  **Write to Internal Memory**: Append the event to `{MEMORY_DIR}/calendar.md` (where `{MEMORY_DIR}` is the user's chosen memory directory from the first-time setup). This file is the skill's internal, permanent long-term memory.
 
     ```markdown
     - [ ] YYYY-MM-DD HH:MM [Event Title] #Tag
@@ -160,7 +160,7 @@ Do not attempt to classify, prioritize, or assign context to items entering the 
 
 ## The Inbox File
 
-All captured items are appended to a single, simple text file: `/home/ubuntu/productivity-skill/memory/inbox.md`.
+All captured items are appended to a single, simple text file: `{MEMORY_DIR}/inbox.md` (where `{MEMORY_DIR}` is the user's chosen memory directory from the first-time setup).
 
 ## The Protocol
 
