@@ -229,3 +229,7 @@ If this skill has helped you, your support means the world to us:
 ## License
 
 MIT License — see [LICENSE](LICENSE) file.
+
+## Download History
+
+[![Download History](https://skill-history.com/chart/yewubin-jpg/productivity-skill.svg)](https://skill-history.com/yewubin-jpg/productivity-skill)
