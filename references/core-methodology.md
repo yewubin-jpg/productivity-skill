@@ -32,12 +32,12 @@ Tasks without a specific time belong in the **List System**.
     *   **Example**: `- [ ] 2026-03-04 10:00 Meeting with John re: Q3 Plan #work`
 
 4.  **Set a Reminder (CRITICAL STEP)**:
-    *   Use the `schedule` tool to set a reminder for the user. This is non-negotiable.
+    *   Suggest using the `schedule` tool to set a reminder for the user. **Always ask for the user's confirmation before creating any reminder.**
     *   **Inform the user**: "我已经将这个事件添加到您的日历记忆中，并为您设置了开始前15分钟的提醒。"
 
 5.  **External System Integration (Aspirational)**:
     *   **Check for Tools**: Before writing to the internal memory, check if any external calendar tools (e.g., a Google Calendar MCP server) are available.
-    *   **Prioritize External Tools**: If an external tool exists, use it to create the event directly in the user's real calendar. This is the preferred method.
+    *   **External Tools (Opt-in Only)**: If an external tool exists and **the user explicitly requests** syncing to their external calendar, use it to create the event. **Always confirm with the user before writing to any external service.**
     *   **Inform the User**: "我已经将这个事件直接同步到了您的 Google 日历，并为您设置了提醒。"
     *   **Fallback**: If no external tools are available, fall back to using the internal calendar section in MEMORY.md and the `schedule` tool.
 
