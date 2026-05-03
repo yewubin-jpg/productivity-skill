@@ -8,8 +8,6 @@ permissions:
     description: "Used to set automatic reminders for calendar events and daily reviews. Always asks for user confirmation before setting."
   - tool: memory
     description: "Uses the system's native MEMORY.md (long-term) and daily notes (memory/YYYY-MM-DD.md) to persist user goals, preferences, and task data. Only after explicit user consent."
-  - mcp: google-calendar
-    description: "(Optional) Syncs events to Google Calendar. Only used when the user explicitly requests it. Requires user-initiated OAuth authentication at runtime."
 metadata:
   clawdbot:
     emoji: "🎯"
@@ -186,7 +184,6 @@ This protocol runs when no productivity-related goals or preferences are found i
 | `schedule` | Setting reminders for calendar events and daily reviews | Asked before each use |
 | System memory (read) | Reading MEMORY.md and daily notes to load goals and context | Covered by FIRST_TIME_SETUP consent |
 | System memory (write) | Writing goals, preferences, and approved rules to MEMORY.md | Covered by FIRST_TIME_SETUP consent; custom rules require additional approval |
-| `google-calendar` (MCP) | Syncing events to external calendar | Only when user explicitly requests; requires OAuth |
 
 **Custom rules**: During evening reviews, I may propose new rules based on your feedback patterns. I will always **show you the proposed rule and ask for your explicit approval** before saving it to MEMORY.md. Rules are never created silently.
 

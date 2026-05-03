@@ -40,9 +40,9 @@ All data is stored through the system's native memory. Here is a complete breakd
 ## What This Skill Does NOT Do
 
 *   **No ambient monitoring**: Energy sensing is based only on your explicit text (word choices, emotional vocabulary) and file content (item counts in inbox/lists). It does **not** monitor typing speed, typing rhythm, response timing, mouse movements, keystroke patterns, or any other behavioral signals.
-*   **Local-first data storage**: All data is stored locally by default. The only exception is when you explicitly request external calendar sync (e.g., Google Calendar), in which case only the specific event data you approve will be sent to the external service through the platform's OAuth flow.
+*   **No external data transmission**: All data is stored locally. No data is ever sent to any external server, API, or third party.
 *   **No silent rule creation**: Custom rules are always shown to you and require your explicit approval before being saved.
-*   **No credential storage**: This skill does not store any passwords, API keys, or authentication tokens. Google Calendar integration (if used) relies on the platform's OAuth flow, which is user-initiated and managed by the platform.
+*   **No credential storage**: This skill does not store any passwords, API keys, or authentication tokens.
 *   **No code execution**: This skill is instruction-only. It contains no scripts, binaries, or executable payloads.
 *   **No custom folders or hardcoded paths**: The skill uses only the system's native memory mechanism and never assumes a fixed directory structure.
 
@@ -55,7 +55,6 @@ This skill declares the following tool permissions:
 | `schedule` | Set reminders for calendar events and reviews | Asked before each use |
 | System memory (read) | Read MEMORY.md and daily notes for context | Covered by initial consent |
 | System memory (write) | Write goals, preferences, and approved rules to MEMORY.md | Covered by initial consent; custom rules require additional approval |
-| `google-calendar` (MCP, optional) | Sync events to Google Calendar | Only when you explicitly request it; requires your OAuth authentication |
 
 ## How to Delete Your Data
 
